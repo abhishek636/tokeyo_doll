@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Hero: React.FC = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center text-center px-4 py-16">
+        <section className="relative flex flex-col items-center justify-center text-center px-4 py-20">
             <div className="w-full absolute inset-0 h-full">
                 <SparklesCore
                     id="tsparticlesfullpage"
