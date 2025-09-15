@@ -5,6 +5,7 @@ import 'swiper/css/bundle';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function SwiperGallery() {
   useEffect(() => {
@@ -104,10 +105,13 @@ export default function SwiperGallery() {
             {slides}
           </div>
           <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] lg:w-fit md:w-[50%] sm:w-[60%] w-[65%]">
-            <img
-              src="https://i.ibb.co/nmFgYrp/swiper-img-11.png"
-              alt=""
+            <Image
+              src="/phone.png"
+              alt="Swiper frame decoration"
+              width={800}
+              height={600}
               className="w-full h-full"
+              priority
             />
           </span>
         </div>
