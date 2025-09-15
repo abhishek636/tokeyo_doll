@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #111111;
+  --foreground: #ffffffff;
 }
 
 @theme inline {
@@ -23,4 +23,36 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  /* H1 */
+  h1 {
+    @apply text-[42px] md:text-[64px] lg:text-[96px] font-medium leading-none;
+  }
+
+  /* H2 */
+  h2 {
+    @apply text-[36px] md:text-[40px] lg:text-[64px] font-medium leading-snug;
+  }
+
+  /* H3 */
+  h3 {
+    @apply text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-snug;
+  }
+
+  /* H5 */
+  h5 {
+    @apply text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-snug;
+  }
+
+  /* H6 */
+  h6 {
+    @apply text-[14px] md:text-[16px] lg:text-[18px] font-medium leading-snug;
+  }
+
+  /* Paragraph */
+  p {
+    @apply text-[16px] md:text-[17px] lg:text-[24px] leading-relaxed;
+  }
 }
