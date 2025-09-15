@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             </p>
 
             {/* Buttons */}
-            <div className="mt-14 flex gap-4 wrap">
+            <div className="mt-14 flex gap-4 flex-wrap justify-center">
                 <Link href="#" className="px-9 py-3 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition">
                     Launch App
                 </Link>
