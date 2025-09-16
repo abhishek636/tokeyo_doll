@@ -16,7 +16,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 ">
+    <header className="fixed top-0 left-0 w-full z-50">
       <div className="max-w-[1300px] mx-auto flex justify-between items-center sm:px-6 px-4 h-16">
         {/* Logo */}
         <Link href="/" className="text-lg font-bold tracking-widest">

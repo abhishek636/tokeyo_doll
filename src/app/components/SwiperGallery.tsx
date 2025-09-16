@@ -18,10 +18,10 @@ export default function SwiperGallery() {
       loop: true,
       speed: 3000,
       centeredSlides: true,
-      // autoplay: {
-      //   delay: 1000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
       effect: 'coverflow',
       coverflowEffect: {
         rotate: 0,
@@ -84,7 +84,7 @@ export default function SwiperGallery() {
           }}
         />
       </div>
-      <div className="text-content absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full text-center p-4 z-10">
+      <div className="text-content -mt-16 w-full text-center p-4 z-40 relative">
         <p className="font-medium text-white text-3xl">{slide.title}</p>
         <p className="mt-2 text-sm text-center w-[55%] mx-auto">{slide.description}</p>
       </div>
