@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
 
                 {/* Gradient Overlay */}
                 <div
-                    className="absolute inset-0 pointer-events-none"
+                    className="absolute inset-0 pointer-events-none mix-blend-multiply"
                     style={{
                         background:
                             "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 95.42%)",

@@ -32,16 +32,16 @@ export default function SwiperGallery() {
       },
       breakpoints: {
         0: {
-          slidesPerView: 1.5,
-          spaceBetween: -50,
+          slidesPerView: 1.2,
+          spaceBetween: 10,
         },
         768: {
-          slidesPerView: 1.5,
-          spaceBetween: -50,
+          slidesPerView: 1.7,
+          spaceBetween: 20,
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 20,
+          spaceBetween: 30,
         },
       },
     });
@@ -54,12 +54,12 @@ export default function SwiperGallery() {
       description: 'Smart & supportive, great for learning and brainstorming',
     },
     {
-      videoSrc: '/videos/doll.mp4',
+      videoSrc: '/videos/doll2.mp4',
       title: 'Kai',
       description: 'Energetic & fun, perfect for gaming and casual chats.',
     },
     {
-      videoSrc: '/videos/doll.mp4',
+      videoSrc: '/videos/doll3.mp4',
       title: 'Luna',
       description: 'Calm & thoughtful, always there to listen and guide.',
     },
@@ -74,7 +74,7 @@ export default function SwiperGallery() {
           loop
           muted
           playsInline
-          className="w-full h-auto object-cover rounded-[3rem]"
+          className="w-full h-auto object-cover rounded-[3rem] px-4 sm:px-0"
         />
         <div
           className="absolute inset-0 pointer-events-none"
@@ -93,15 +93,15 @@ export default function SwiperGallery() {
 
   return (
     <div className='md:py-20 py-10'>
-      <h2 className='text-center block lg:mb-32 sm:mb-32 mb-16'>Meet Your AI Characters</h2>
-      <div className="relative w-full my-10 mx-auto h-[600px]">
+      <h2 className='text-center block mb-16'>Meet Your AI Characters</h2>
+      <div className="relative w-full mx-auto 2xl:h-[785px] xl:h-[810px] lg:h-[745px] sm:h-[856px] h-[684px] flex items-center">
         <div className="relative swiper-container max-w-[1300px] pt-[15px] mx-auto overflow-hidden">
-          <div className="swiper-wrapper">
+          <div className="swiper-wrapper h-full flex items-center">
             {slides}
           </div>
           
         </div>
-        <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] md:w-[19%]">
+        <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] 2xl:w-[388px] xl:w-[400px] lg:w-[352px] sm:w-[438px] w-[338px]">
             <Image
               src="/iPhone14Pro.svg"
               alt="Swiper frame decoration"
@@ -113,7 +113,7 @@ export default function SwiperGallery() {
           </span>
       </div>
       <div className='flex justify-center'>
-        <Link href="#" className="px-9 py-3 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition mt-20">
+        <Link href="#" className="px-9 py-3 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition mt-16">
           Pick one to start, then make it truly yours
         </Link>
       </div>
