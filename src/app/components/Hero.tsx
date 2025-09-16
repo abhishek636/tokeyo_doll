@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Hero: React.FC = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center text-center px-4 py-20">
-            <div className="w-full absolute inset-0 h-full">
+        <section className="relative flex flex-col items-center justify-center text-center sm:px-4 sm:py-20 py-16">
+            <div className="w-full absolute inset-0 h-full z-30">
                 <SparklesCore
                     id="tsparticlesfullpage"
                     background="transparent"
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="mt-8 text-white">
+            <h1 className="sm:mt-8 mt-4 text-white">
                 AI Streamer Launchpad
             </h1>
 
@@ -50,19 +50,19 @@ const Hero: React.FC = () => {
             </p>
 
             {/* Buttons */}
-            <div className="mt-14 flex gap-4 flex-wrap justify-center">
-                <Link href="#" className="px-9 py-3 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition">
+            <div className="sm:mt-14 mt-8 flex gap-4 flex-wrap justify-center">
+                <Link href="#" className="sm:px-9 sm:py-3 z-40 px-6 py-2 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition flex items-center justify-center">
                     Launch App
                 </Link>
                 <Link
                     href="#"
-                    className="relative px-9 py-3 text-[#0071E3] text-lg
+                    className="relative sm:px-9 z-40 sm:py-3 text-[#0071E3] text-lg
                    rounded-full border border-blue-500 
                    hover:text-white hover:bg-blue-600/20
                    transition-all duration-300 ease-in-out
                    shadow-[0_0_15px_rgba(0,0,255,0.5)] 
                    hover:shadow-[0_0_25px_rgba(0,0,255,0.8)]
-                   backdrop-blur-sm"
+                   backdrop-blur-sm text-sm px-6 py-3"
                 >
                     Visit Livestream
                 </Link>

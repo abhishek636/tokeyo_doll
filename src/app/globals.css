@@ -28,12 +28,12 @@ body {
 @layer base {
   /* H1 */
   h1 {
-    @apply text-[42px] md:text-[64px] lg:text-[96px] font-medium leading-none;
+    @apply text-[32px] md:text-[64px] lg:text-[96px] font-medium leading-none;
   }
 
   /* H2 */
   h2 {
-    @apply text-[36px] md:text-[40px] lg:text-[64px] font-medium leading-snug;
+    @apply text-[24px] md:text-[40px] lg:text-[64px] font-medium leading-snug;
   }
 
   /* H3 */
