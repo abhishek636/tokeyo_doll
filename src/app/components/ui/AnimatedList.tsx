@@ -18,7 +18,7 @@ export const AnimatedList = React.memo(
   ({ children, className, activeIndex, ...props }: AnimatedListProps) => {
     // ✅ Keep only valid ReactElements with correct typing
     const childrenArray = useMemo(() => {
-      return React.Children.toArray(children).filter((child): child is ReactElement =>
+      return React.Children.toArray(children).filter((child): child is ReactElement<{ children?: ReactNode }> =>
         isValidElement(child)
       );
     }, [children]);
@@ -49,8 +49,8 @@ export const AnimatedList = React.memo(
                   : "bg-[#2A2A2A] text-white border border-transparent"
               )}
             >
-              {/* ✅ Safe access to children since we filtered for ReactElement */}
-              {React.isValidElement(item) && item.props.children}
+              {/* ✅ Type-safe access to children */}
+              {item.props.children}
             </div>
           );
         })}
