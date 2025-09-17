@@ -1,32 +1,50 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { AnimatedList } from "../../components/ui/AnimatedList";
+import { motion } from "framer-motion";
+
+const cards = ["Customize", "Memory", "Providers", "System"];
 
 const Step2 = () => {
-  const items = ["Customize", "Memory", "Module", "System"];
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Auto rotate active item every 2s
+  const [activeIndex, setActiveIndex] = useState(1); // Start with card #2 (Memory)
+
+  // Auto switch active card
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % items.length);
-    }, 2000);
+      setActiveIndex((prev) => (prev + 1) % cards.length);
+    }, 2000); // change every 2s
     return () => clearInterval(interval);
   }, []);
 
-  // Calculate the next item index, wrapping around to the beginning
-  const nextIndex = (activeIndex + 1) % items.length;
 
   return (
     <div className="flex items-center bg-[#1D1D1D] rounded-2xl p-6 sm:flex-row flex-col  justify-center">
       {/* Left Side List */}
-      <AnimatedList className="p-6" activeIndex={activeIndex}>
-        {items.map((item, index) => (
-          <div key={index}>
-            <span>{item}</span>
-          </div>
-        ))}
-      </AnimatedList>
+      <div className="flex flex-col items-center justify-center space-y-4 my-4">
+        {cards.map((card, index) => {
+          const isActive = index === activeIndex;
+
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{
+                opacity: isActive ? 1 : 0.4,
+                y: isActive ? 0 : 10,
+                scale: isActive ? 1.1 : 0.95,
+              }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className={`w-64 h-16 flex items-center justify-center cursor-pointer
+              ${isActive
+                  ? "border-2 border-[#3B82F6] text-[#3B82F6] bg-black"
+                  : "bg-[#2d2d2d] text-white/70"}
+              rounded-[10px] shadow-md`}
+            >
+              {card}
+            </motion.div>
+          );
+        })}
+      </div>
 
       {/* Right Side Step Info */}
       <div className="text-center sm:text-left sm:px-none px-6 sm:pb-none pb-6">
