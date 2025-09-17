@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
                 <img src="/videos/doll.gif" alt="Animated GIF" className="z-10"/>
 
                 <div
-                    className="absolute inset-0 pointer-events-none "
+                    className="absolute inset-0 pointer-events-none sm:block hidden"
                     style={{
                         background: "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 82.42%)"
 
