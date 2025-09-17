@@ -8,9 +8,9 @@ import { motion } from "motion/react";
 
 const Hero: React.FC = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center text-center sm:px-4 sm:py-20 py-16" id="home">
+        <section className="relative flex flex-col items-center justify-center bg-[#111111] text-center sm:px-4 sm:py-20 py-16" id="home">
             {/* Sparkles Background */}
-            <div className="w-full absolute inset-0 h-full">
+            <div className="w-full absolute inset-0 bg-[#111111] h-full">
                 <SparklesCore
                     id="tsparticlesfullpage"
                     background="transparent"

@@ -256,7 +256,7 @@ export const SparklesCore = (props: ParticlesProps) => {
               shadow: {
                 blur: 0,
                 color: {
-                  value: "#000",
+                  value: "#111111",
                 },
                 enable: false,
                 offset: {
@@ -408,7 +408,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 shadow: {
                   blur: 5,
                   color: {
-                    value: "#000",
+                    value: "#111111",
                   },
                   enable: false,
                 },
