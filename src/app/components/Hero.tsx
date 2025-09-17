@@ -31,23 +31,23 @@ const Hero: React.FC = () => {
                 />
 
                 {/* Mobile fade overlay */}
-                {/* <div
+                <div
                     className="absolute inset-x-0 bottom-0 h-24 sm:hidden"
                     style={{
                         background:
                             "linear-gradient(to top, #111111 40%, rgba(17,17,17,0) 100%)",
                     }}
-                /> */}
+                />
 
                 {/* Desktop fade overlay (your old one) */}
-                {/* <div
+                <div
                     className="absolute inset-0 pointer-events-none sm:block hidden"
                     style={{
                         background:
                             "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 90.42%)",
                     }}
-                /> */}
-                <img src="/Gradient.png" alt="Gradient" className="absolute bottom-0 left-0 w-full"/>
+                />
+                {/* <img src="/Gradient.png" alt="Gradient" className="absolute bottom-0 left-0 w-full"/> */}
             </div>
 
             {/* Headline */}
