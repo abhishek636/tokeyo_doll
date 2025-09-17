@@ -5,7 +5,7 @@ import ScrollReveal from "./ui/ScrollReveal "
 export default function AtTokyo() {
     return (
         <section>
-            <GradientLines className="min-h-screen h-[800px]">
+            <GradientLines className="sm:min-h-screen sm:h-fit h-[560px]">
                 <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}

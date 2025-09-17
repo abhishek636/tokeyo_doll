@@ -42,7 +42,10 @@ const slides = [
 const UnderDevelopmentSlider = () => {
   return (
     <div className="w-full max-w-full md:max-w-6xl mx-auto text-white">
-      <h3 className="text-center mb-6">Under Development</h3>
+      <h3 className="text-center mb-2">Under Development</h3>
+      <p className="text-center text-[#A0A0A0] mb-8">
+        Thinking, vision, speech synthesis, gaming, etc.
+      </p>
       <div className="w-full overflow-hidden relative">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -80,8 +83,8 @@ const UnderDevelopmentSlider = () => {
               <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[320px]">
                 <div className="md:w-[138px] md:h-[138px] w-[98px] h-[98px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">
-                  <h3 className="font-bold text-lg">{title}</h3>
-                  <p className="text-sm text-gray-300">{subtitle}</p>
+                  <h3 className="font-bold text-lg mb-2">{title}</h3>
+                  <p className="text-sm text-[#A0A0A0] leading-5">{subtitle}</p>
                 </div>
                 <div>
                   <span className="inline-block border border-yellow-400 text-yellow-400 rounded-full px-3 py-1 text-xs font-semibold tracking-wide">

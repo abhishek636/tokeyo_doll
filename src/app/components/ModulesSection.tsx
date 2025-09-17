@@ -40,7 +40,7 @@ const ModulesSection = () => {
   return (
     <div className="w-full max-w-full md:max-w-6xl mx-auto text-white mb-12">
       <h2 className="text-center mb-2">Modules</h2>
-      <p className="text-center mb-8">
+      <p className="text-center text-[#A0A0A0] mb-8">
         Thinking, vision, speech synthesis, gaming, etc.
       </p>
       {/* Mobile Slider */}
@@ -50,10 +50,10 @@ const ModulesSection = () => {
           spaceBetween={20}
           slidesPerView={1}
           speed={2500}
-          // autoplay={{ 
-          //   delay: 1000, 
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{ 
+            delay: 1000, 
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             320: {
               slidesPerView: 1.8,
@@ -62,7 +62,7 @@ const ModulesSection = () => {
               slidesPerView: 2,
             },
             768: {
-              slidesPerView: 2.5,
+              slidesPerView: 3.5,
             }
           }}
           // pagination={{ clickable: true }}
@@ -74,8 +74,8 @@ const ModulesSection = () => {
               <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
                 <div className="w-[98px] h-[98px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">
-                  <h3 className="font-bold text-lg">{title}</h3>
-                  <p className="text-sm text-gray-300">{subtitle}</p>
+                  <h3 className="font-bold text-lg mb-2">{title}</h3>
+                  <p className="text-sm text-[#A0A0A0] leading-5">{subtitle}</p>
                 </div>
                 <div>
                   <span className="inline-block border border-green-500 text-green-500 rounded-full px-3 py-1 text-xs font-semibold tracking-wide">
@@ -108,8 +108,8 @@ const ModulesSection = () => {
                 <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
                   <div className="h-[138px] w-[138px] flex items-center justify-center">{icon}</div>
                   <div className="text-center">
-                    <h3 className="font-bold text-lg">{title}</h3>
-                    <p className="text-sm text-gray-300">{subtitle}</p>
+                    <h3 className="font-bold text-lg mb-2">{title}</h3>
+                    <p className="text-sm text-[#A0A0A0] leading-5">{subtitle}</p>
                   </div>
                   <div>
                     <span className="inline-block border border-green-500 text-green-500 rounded-full px-3 py-1 text-xs font-semibold tracking-wide">
@@ -129,8 +129,8 @@ const ModulesSection = () => {
               >
                 <div className="h-[138px] w-[138px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">
-                  <h3 className="font-bold text-lg">{title}</h3>
-                  <p className="text-sm text-gray-300">{subtitle}</p>
+                  <h3 className="font-bold text-lg mb-2">{title}</h3>
+                  <p className="text-sm text-[#A0A0A0] leading-5">{subtitle}</p>
                 </div>
                 <div>
                   <span className="inline-block border border-green-500 text-green-500 rounded-full px-3 py-1 text-xs font-semibold tracking-wide">

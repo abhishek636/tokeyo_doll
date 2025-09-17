@@ -33,7 +33,7 @@ body {
 
   /* H2 */
   h2 {
-    @apply text-[24px] md:text-[40px] lg:text-[64px] font-medium leading-none tracking-tighter;
+    @apply text-[28px] md:text-[40px] lg:text-[64px] font-medium leading-none tracking-tighter;
   }
 
   /* H3 */

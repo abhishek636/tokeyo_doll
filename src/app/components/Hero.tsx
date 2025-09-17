@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
             <ChangingWordHero />
 
             {/* Subtext */}
-            <p className="sm:mt-4 mt-2 text-white z-20 relative sm:px-0 px-2">
+            <p className="sm:mt-4 mt-2 text-[#A0A0A0] z-20 relative sm:px-0 px-2">
                 Choose a character, customize their world, and start real conversations
                 powered by AI.
             </p>
@@ -73,13 +73,13 @@ const Hero: React.FC = () => {
             <div className="sm:mt-14 mt-8 flex gap-4 flex-wrap justify-center">
                 <Link
                     href="#"
-                    className="sm:px-9 sm:py-3 z-40 px-6 py-2 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition flex items-center justify-center"
+                    className="sm:px-9 sm:py-3 z-20 px-6 py-2 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition flex items-center justify-center"
                 >
                     Launch App
                 </Link>
                 <Link
                     href="#"
-                    className="relative sm:px-9 z-40 sm:py-3 text-[#0071E3] text-lg
+                    className="relative sm:px-9 z-20 sm:py-3 text-[#0071E3] text-lg
                    rounded-full border border-blue-500 
                    hover:text-white
                    transition-all duration-300 ease-in-out

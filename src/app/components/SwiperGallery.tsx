@@ -88,14 +88,14 @@ export default function SwiperGallery() {
       </div>
       <div className="text-content w-full text-center p-4 z-40 relative z-20">
         <p className="font-medium text-white text-3xl relative z-50">{slide.title}</p>
-        <p className="mt-2 text-sm text-center w-[55%] mx-auto">{slide.description}</p>
+        <p className="mt-2 text-sm  text-[#A0A0A0] text-center w-[55%] mx-auto">{slide.description}</p>
       </div>
     </div>
   ));
 
   return (
     <section className='md:py-20 py-10 bg-[#111111]' id='features'>
-      <h2 className='text-center block mb-16'>Meet Your AI Characters</h2>
+      <h2 className='text-center block sm:mb-16 mb-8'>Meet Your AI Characters</h2>
       <div className="relative w-full mx-auto 2xl:h-[785px] xl:h-[810px] lg:h-[745px] sm:h-[856px] h-[684px] flex items-center">
         <div className="relative swiper-container max-w-[1300px] pt-[15px] mx-auto overflow-hidden">
           <div className="swiper-wrapper h-full flex items-center">
@@ -103,7 +103,7 @@ export default function SwiperGallery() {
           </div>
 
         </div>
-        <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] 2xl:w-[388px] xl:w-[400px] lg:w-[352px] sm:w-[438px] w-[338px]">
+        <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 2xl:w-[388px] xl:w-[400px] lg:w-[352px] sm:w-[438px] w-[338px]">
           <Image
             src="/iPhone14Pro.svg"
             alt="Swiper frame decoration"
@@ -115,7 +115,7 @@ export default function SwiperGallery() {
         </span>
       </div>
       <div className='flex justify-center'>
-        <Link href="#" className="px-9 py-3 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition mt-16">
+        <Link href="#" className="px-9 py-3 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition sm:mt-16 mt-12">
           Pick one to start, then make it truly yours
         </Link>
       </div>

@@ -43,14 +43,14 @@ export default function AICharacterSection() {
                             className="w-full h-auto object-contain"
                         />
  
-                        <div className="space-y-8 order-1 md:order-2 text-center md:text-left">
+                        <div className="space-y-8 order-1 md:order-2 text-center md:text-left relative z-10">
                             <div className="space-y-6">
                                 <h2 className="text-white">
                                     Your AI Character
                                     <span className="text-white"> is Waiting</span>
                                 </h2>
  
-                                <p className="text-[#FFFFFF]/60 max-w-md mx-auto lg:mx-0">
+                                <p className="text-[#A0A0A0] max-w-md mx-auto lg:mx-0">
                                     Pick one of our 3 characters today, make them your own, and start the conversation.
                                 </p>
                             </div>

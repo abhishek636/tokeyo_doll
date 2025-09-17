@@ -1,30 +1,49 @@
 "use client";
- 
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
- 
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
- 
+
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#features" },
     { name: "AI Characters", href: "#ai" },
     { name: "How It Works", href: "#work" },
     { name: "Modules", href: "#modules" },
-    {name: "FAQ", href: "#faq"},
+    { name: "FAQ", href: "#faq" },
   ];
- 
+
+  // Handle scroll background
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-[70]">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300  ${
+        scrolled ? "bg-[#111111]" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-[1300px] mx-auto flex justify-between items-center sm:px-6 px-4 h-16">
         {/* Logo */}
         <Link href="/" className="text-lg text-white font-bold tracking-widest">
           PROJECT TOKYO
         </Link>
- 
+
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-sm">
           {navLinks.map((link) => (
@@ -41,7 +60,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
- 
+
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -54,7 +73,7 @@ export default function Header() {
               <span className="absolute left-0 top-1/2 w-6 h-[2px] bg-white -rotate-45"></span>
             </div>
           ) : (
-            // Hamburger (two-line)
+            // Hamburger
             <div className="flex flex-col space-y-2">
               <span className="block w-7 h-[2px] bg-white"></span>
               <span className="block w-7 h-[2px] bg-white"></span>
@@ -62,10 +81,10 @@ export default function Header() {
           )}
         </button>
       </div>
- 
+
       {/* Mobile Nav Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-full bg-black bg-opacity-95 transform transition-transform duration-300 ease-in-out md:hidden z-[60] ${
+        className={`fixed top-0 left-0 h-full w-full bg-[#111111] transform transition-transform duration-300 ease-in-out md:hidden z-[60] ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -76,7 +95,7 @@ export default function Header() {
               href={link.href}
               className={`transition-colors text-[24px] ml-10 font-bold ${
                 pathname === link.href
-                  ? "text-blue-500 "
+                  ? "text-blue-500"
                   : "text-white hover:text-blue-500"
               }`}
               onClick={() => setIsOpen(false)}
@@ -89,5 +108,3 @@ export default function Header() {
     </header>
   );
 }
- 
- 

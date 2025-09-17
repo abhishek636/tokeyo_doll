@@ -59,7 +59,7 @@ const Step2 = () => {
           {/* {items[nextIndex]} */}
           Customize
         </h3>
-        <p className="text-gray-400 text-[20px]">
+        <p className="text-[#A0A0A0] text-[20px]">
           Adjust modules, memory, and voices.
         </p>
       </div>

@@ -51,12 +51,12 @@ export default function FaqSection() {
             Questions?
             <br/> Lets clear things up.
           </h2>
-          <p className="text-white/60 w-full max-w-lg">
+          <p className="text-[#A0A0A0] w-full max-w-lg">
             Yes, we understand—AI-powered solutions, business automation tools,
             AI for marketing, AI for customer support... a lot of big words can
             get confusing.
           </p>
-          <p className="text-white/60 w-full max-w-lg">
+          <p className="text-[#A0A0A0] w-full max-w-lg">
             Were here to make it clear—check out our FAQs, and if you still
             feel the need to ask, AI questions, <b>Cassie</b> is always ready to
             answer.

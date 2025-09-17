@@ -168,7 +168,7 @@ const Step1 = () => {
         </div>
 
         <h3 className="text-[32px] text-white mb-3 mt-7">Choose a Character</h3>
-        <p className="text-gray-400 text-[20px]">Start with Aria, Kai, or Luna.</p>
+        <p className="text-[#A0A0A0] text-[20px]">Start with Aria, Kai, or Luna.</p>
       </div>
 
       {/* Auto-hover CSS */}

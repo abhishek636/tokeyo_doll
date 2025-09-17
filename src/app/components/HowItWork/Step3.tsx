@@ -32,7 +32,7 @@ const Step3 = () => {
                         </div>
 
                     </div>
-                    <span className="absolute top-1/2 left-0 -translate-y-1/2 z-[999]">
+                    <span className="absolute top-1/2 left-0 -translate-y-1/2 z-10">
                         <Image
                             src="/iPhone14Pro.svg"
                             alt="Swiper frame decoration"
@@ -51,7 +51,7 @@ const Step3 = () => {
                     <span className="text-white font-semibold">Step 3</span>
                 </div>
                 <h3 className="text-[32px] text-white mb-3 mt-7">Talk</h3>
-                <p className="text-gray-400 text-[20px]">Have real conversations that feel natural and alive.</p>
+                <p className="text-[#A0A0A0] text-[20px]">Have real conversations that feel natural and alive.</p>
             </div>
 
         </div>
