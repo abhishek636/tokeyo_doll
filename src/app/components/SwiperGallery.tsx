@@ -76,7 +76,7 @@ export default function SwiperGallery() {
           playsInline
           className="w-full h-auto object-cover px-4 sm:px-0"
         />
-        <Image src="/fader.png" width={1096} height={700} alt="hand" className="absolute bottom-0 left-0 z-20" priority loading="eager"/>
+    
         {/* <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -85,7 +85,7 @@ export default function SwiperGallery() {
           }}
         /> */}
       </div>
-      <div className="text-content -mt-12 w-full text-center p-4 z-40 relative z-50">
+      <div className="text-content -mt-12 w-full text-center p-4 z-40 relative z-20">
         <p className="font-medium text-white text-3xl">{slide.title}</p>
         <p className="mt-2 text-sm text-center w-[55%] mx-auto">{slide.description}</p>
       </div>
