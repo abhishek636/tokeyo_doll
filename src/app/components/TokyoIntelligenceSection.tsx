@@ -95,13 +95,13 @@ const TokyoIntelligenceSection = () => {
                 </div>
  
                 {/* Mobile/Tablet Pills Container (Simplified positioning for smaller screens) */}
-                <div className="absolute inset-0 flex md:hidden justify-between items-center px-4">
-                    <div className="flex flex-col space-y-4 pt-16 pb-16">
+                <div className="absolute inset-0 flex md:hidden justify-between sm:items-center items-start sm:px-4">
+                    <div className="flex flex-col space-y-4 sm:pt-16 sm:pb-16">
                         {leftPills.slice(0, 3).map((pill, idx) => (
                             <Pill key={idx} label={pill.label} gif={pill.gif} className="relative !left-0 !top-0" />
                         ))}
                     </div>
-                    <div className="flex flex-col space-y-4 pt-16 pb-16">
+                    <div className="flex flex-col space-y-4 sm:pt-16 sm:pb-16">
                         {rightPills.slice(0, 3).map((pill, idx) => (
                             <Pill key={idx} label={pill.label} gif={pill.gif} isRight={true} className="relative !right-0 !top-0" />
                         ))}
@@ -110,7 +110,7 @@ const TokyoIntelligenceSection = () => {
  
                 {/* Doll Video - Responsive width and margin adjustment for smaller screens */}
                 {/* NOTE: Changed path from /doll.gif to /videos/doll.gif based on a reference in your original code. Adjust if necessary. */}
-                <div className="relative z-20 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-[580px] mx-auto">
+                <div className="relative z-20 sm:w-full w-70 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-[580px] mx-auto">
                     <img src="/videos/doll.gif" alt="doll" className='w-full' />
                 </div>
             </div>
@@ -126,8 +126,8 @@ const TokyoIntelligenceSection = () => {
                             relative z-10 text-[10px] sm:text-xs text-white bg-[#FFFFFF1A]
                             px-4 py-3 sm:px-8 md:px-16 md:py-7
                             hover:bg-green-700 transition-colors flex-grow-0 min-w-0
-                            ${idx === 0 ? "rounded-l-[100px]" : ""}
-                            ${idx === 2 ? "rounded-r-[100px]" : ""}
+                            ${idx === 0 ? "sm:rounded-l-[100px]" : ""}
+                            ${idx === 2 ? "sm:rounded-r-[100px]" : ""}
                             ${bottomTabs.length === 3 ? (idx === 1 ? 'rounded-none' : '') : ''}
                             ${bottomTabs.length !== 3 ? 'rounded-full' : ''}
                             // Fallback for smaller screens to ensure rounded ends still apply when wrapping

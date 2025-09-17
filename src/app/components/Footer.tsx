@@ -22,18 +22,18 @@ export default function Footer() {
                         <div className="text-left">
                             <h4 className="text-lg font-semibold text-white mb-4">Features</h4>
                             <ul className="space-y-3">
-                                <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">Home</Link></li>
-                                <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">About</Link></li>
-                                <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">AI Characters</Link></li>
+                                <li><Link href="#home" className="hover:text-white text-[#BABABA] transition-colors duration-200">Home</Link></li>
+                                <li><Link href="#features" className="hover:text-white text-[#BABABA] transition-colors duration-200">About</Link></li>
+                                <li><Link href="#ai" className="hover:text-white text-[#BABABA] transition-colors duration-200">AI Characters</Link></li>
                             </ul>
                         </div>
 
                         {/* Resources Column */}
                         <div className="text-left">
                             <ul className="space-y-3">
-                                <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">How It Works</Link></li>
-                                <li><Link href="#" className="hover:text-white transition-colors duration-200 text-[#BABABA]">Modules</Link></li>
-                                <li><Link href="#" className="hover:text-white transition-colors duration-200 text-[#BABABA]">Faq</Link></li>
+                                <li><Link href="#work" className="hover:text-white text-[#BABABA] transition-colors duration-200">How It Works</Link></li>
+                                <li><Link href="#modules" className="hover:text-white transition-colors duration-200 text-[#BABABA]">Modules</Link></li>
+                                <li><Link href="#faq" className="hover:text-white transition-colors duration-200 text-[#BABABA]">Faq</Link></li>
                             </ul>
                         </div>
 
