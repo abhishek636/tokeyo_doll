@@ -76,7 +76,7 @@ export default function SwiperGallery() {
           playsInline
           className="w-full h-auto object-cover rounded-[3rem] px-4 sm:px-0"
         />
-        <Image src="/fader.png" width={1096} height={700} alt="hand" className="absolute bottom-0 left-0" priority    />
+        <Image src="/fader.png" width={1096} height={700} alt="hand" className="absolute bottom-0 left-0" priority loading="eager"/>
         {/* <div
           className="absolute inset-0 pointer-events-none"
           style={{
