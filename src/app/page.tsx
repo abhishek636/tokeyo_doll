@@ -19,7 +19,7 @@ export default function Home() {
        <TokyoIntelligenceSection />
        <HowItWorks />
        <Webelieve />
-       <section>
+       <section className="bg-black sm:py-20 py-16">
         <ModulesSection />
        <UnderDevelopmentSlider />
        </section>

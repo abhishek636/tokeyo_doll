@@ -50,10 +50,10 @@ const ModulesSection = () => {
           spaceBetween={20}
           slidesPerView={1}
           speed={2500}
-          autoplay={{ 
-            delay: 1000, 
-            disableOnInteraction: false,
-          }}
+          // autoplay={{ 
+          //   delay: 1000, 
+          //   disableOnInteraction: false,
+          // }}
           breakpoints={{
             320: {
               slidesPerView: 1.8,
@@ -71,7 +71,7 @@ const ModulesSection = () => {
         >
           {modules.map(({ id, title, subtitle, icon }) => (
             <SwiperSlide key={id}>
-              <div className="bg-black bg-opacity-30 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
+              <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
                 <div className="w-[98px] h-[98px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">
                   <h3 className="font-bold text-lg">{title}</h3>
@@ -105,7 +105,7 @@ const ModulesSection = () => {
           >
             {modules.map(({ id, title, subtitle, icon }) => (
               <SwiperSlide key={id}>
-                <div className="bg-black bg-opacity-30 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
+                <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
                   <div className="h-[138px] w-[138px] flex items-center justify-center">{icon}</div>
                   <div className="text-center">
                     <h3 className="font-bold text-lg">{title}</h3>
@@ -125,7 +125,7 @@ const ModulesSection = () => {
             {modules.map(({ id, title, subtitle, icon }) => (
               <div
                 key={id}
-                className="bg-black bg-opacity-30 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-w-[300px] min-h-[250px]"
+                className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-w-[300px] min-h-[250px]"
               >
                 <div className="h-[138px] w-[138px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">

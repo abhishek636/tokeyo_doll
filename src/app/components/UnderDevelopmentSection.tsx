@@ -77,7 +77,7 @@ const UnderDevelopmentSlider = () => {
         >
           {slides.map(({ id, title, subtitle, icon }) => (
             <SwiperSlide key={id}>
-              <div className="bg-black bg-opacity-30 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[320px]">
+              <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[320px]">
                 <div className="md:w-[138px] md:h-[138px] w-[98px] h-[98px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">
                   <h3 className="font-bold text-lg">{title}</h3>

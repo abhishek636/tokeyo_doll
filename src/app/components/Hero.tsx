@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
                 />
             </div>
             {/* Character Video */}
-            <div className="relative w-full max-w-md sm:hidden block">
+            {/* <div className="relative w-full max-w-md sm:hidden block">
                 <video
                     src="/videos/doll.mp4" 
                     autoPlay
@@ -37,8 +37,8 @@ const Hero: React.FC = () => {
                             "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 95.42%)",
                     }}
                 />
-            </div>
-            <div className="relative w-full max-w-md sm:block hidden">
+            </div> */}
+            <div className="relative w-full max-w-md">
                 <img src="/videos/doll.gif" alt="Animated GIF" className="z-10"/>
 
                 <div

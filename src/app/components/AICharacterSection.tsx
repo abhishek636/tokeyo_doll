@@ -11,7 +11,7 @@ export default function AICharacterSection() {
                 <div className="relative container mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-6 lg:gap-10 items-center">
  
-                        <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
+                        {/* <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
                             <div
                                 className="relative w-80 h-[350px] md:w-[1096px] md:h-[700px] bg-contain bg-no-repeat bg-center"
                                 style={{
@@ -33,7 +33,15 @@ export default function AICharacterSection() {
                                 </div>
                             </div>
  
-                        </div>
+                        </div> */}
+                        <video
+                            src="/videos/AICharactor.mp4" 
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-auto object-contain"
+                        />
  
                         <div className="space-y-8 order-1 md:order-2 text-center md:text-left">
                             <div className="space-y-6">
