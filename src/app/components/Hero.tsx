@@ -3,6 +3,8 @@
 import React from "react";
 import { SparklesCore } from "../components/Backgrounds/sparkles";
 import Link from "next/link";
+import { LayoutTextFlip } from "./ui/LayoutTextFlip";
+import { motion } from "motion/react";
 
 const Hero: React.FC = () => {
     return (
@@ -48,7 +50,15 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="sm:mt-8 mt-4 text-white">AI Streamer Launchpad</h1>
+            {/* <h1 className="sm:mt-8 mt-4 text-white">AI Streamer Launchpad</h1> */}
+            <motion.div className="relative  flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
+                <h1 className="sm:mt-8 mt-4 text-white">AI&nbsp; 
+                    <LayoutTextFlip
+                        text=""
+                        words={["Streamer", "Friend", "Buddy", "Gamer", "Creator","Companion","Baddie","Helper","Assistant"]}
+                    />
+                      &nbsp;Launchpad</h1>
+            </motion.div>
 
             {/* Subtext */}
             <p className="mt-4 text-white">

@@ -71,7 +71,7 @@ const ModulesSection = () => {
         >
           {modules.map(({ id, title, subtitle, icon }) => (
             <SwiperSlide key={id}>
-              <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
+              <div className="shadow-sm ring shadow-black/10 ring-black/10 drop-shadow-lg dark:bg-neutral-900 dark:text-white dark:shadow-sm dark:ring-1 dark:shadow-white/10 dark:ring-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
                 <div className="w-[98px] h-[98px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">
                   <h3 className="font-bold text-lg">{title}</h3>
@@ -105,7 +105,7 @@ const ModulesSection = () => {
           >
             {modules.map(({ id, title, subtitle, icon }) => (
               <SwiperSlide key={id}>
-                <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
+                <div className="shadow-sm ring shadow-black/10 ring-black/10 drop-shadow-lg dark:bg-neutral-900 dark:text-white dark:shadow-sm dark:ring-1 dark:shadow-white/10 dark:ring-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
                   <div className="h-[138px] w-[138px] flex items-center justify-center">{icon}</div>
                   <div className="text-center">
                     <h3 className="font-bold text-lg">{title}</h3>
@@ -125,7 +125,7 @@ const ModulesSection = () => {
             {modules.map(({ id, title, subtitle, icon }) => (
               <div
                 key={id}
-                className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-w-[300px] min-h-[250px]"
+                className="shadow-sm ring shadow-black/10 ring-black/10 drop-shadow-lg dark:bg-neutral-900 dark:text-white dark:shadow-sm dark:ring-1 dark:shadow-white/10 dark:ring-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-w-[300px] min-h-[250px]"
               >
                 <div className="h-[138px] w-[138px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">
