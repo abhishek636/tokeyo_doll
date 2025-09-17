@@ -2,6 +2,9 @@ import Hero from "./components/Hero";
 import SwiperGallery from "./components/SwiperGallery";
 import AtTokyo from "./components/AtTokyo";
 import Webelieve from "./components/Webelieve";
+import HowItWorks from "./components/HowItWork/HowItWork";
+import ModulesSection from "./components/ModulesSection";
+import UnderDevelopmentSlider from "./components/UnderDevelopmentSection";
 export default function Home() {
   return (
     <div>
@@ -9,7 +12,10 @@ export default function Home() {
        <Hero />
        <SwiperGallery />
        <AtTokyo />
+       <HowItWorks />
        <Webelieve />
+       <ModulesSection />
+       <UnderDevelopmentSlider />
       </main>
       
     </div>

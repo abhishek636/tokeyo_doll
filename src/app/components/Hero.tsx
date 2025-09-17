@@ -3,11 +3,12 @@
 import React from "react";
 import { SparklesCore } from "../components/Backgrounds/sparkles";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero: React.FC = () => {
     return (
         <section className="relative flex flex-col items-center justify-center text-center sm:px-4 sm:py-20 py-16">
-            <div className="w-full absolute inset-0 h-full z-30">
+            <div className="w-full absolute inset-0 h-full">
                 <SparklesCore
                     id="tsparticlesfullpage"
                     background="transparent"
@@ -19,9 +20,9 @@ const Hero: React.FC = () => {
                 />
             </div>
             {/* Character Video */}
-            <div className="relative w-full max-w-md">
+            {/* <div className="relative w-full max-w-md">
                 <video
-                    src="/videos/doll.mp4" // 👉 replace with your video path
+                    src="/videos/doll.mp4" 
                     autoPlay
                     loop
                     muted
@@ -29,7 +30,6 @@ const Hero: React.FC = () => {
                     className="w-full h-auto object-contain"
                 />
 
-                {/* Gradient Overlay */}
                 <div
                     className="absolute inset-0 pointer-events-none "
                     style={{
@@ -37,7 +37,8 @@ const Hero: React.FC = () => {
                             "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 95.42%)",
                     }}
                 />
-            </div>
+            </div> */}
+             <img src="/videos/doll.gif" alt="Animated GIF" className="z-10"/>
 
             {/* Headline */}
             <h1 className="sm:mt-8 mt-4 text-white">
