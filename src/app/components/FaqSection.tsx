@@ -5,7 +5,7 @@ const faqData = [
   {
     question: "What can I use Sintra for?",
     answer:
-      "Sintra provides AI-powered solutions for marketing, business automation, and customer support. It helps streamline operations and enhance your business's overall efficiency.",
+      "Sintra provides AI-powered solutions for marketing, business automation, and customer support. It helps streamline operations and enhance your business overall efficiency.",
   },
   {
     question: "Is there a money-back guarantee?",
@@ -49,7 +49,7 @@ export default function FaqSection() {
         <div className="space-y-6 text-center md:text-left">
           <h2 className="md:text-5xl text-3xl md:leading-15 leading-10 ">
             Questions?
-            <br/> Let's clear things up.
+            <br/> Lets clear things up.
           </h2>
           <p className="text-white/60 w-full max-w-lg">
             Yes, we understand—AI-powered solutions, business automation tools,
@@ -57,7 +57,7 @@ export default function FaqSection() {
             get confusing.
           </p>
           <p className="text-white/60 w-full max-w-lg">
-            We're here to make it clear—check out our FAQs, and if you still
+            Were here to make it clear—check out our FAQs, and if you still
             feel the need to ask, AI questions, <b>Cassie</b> is always ready to
             answer.
           </p>
