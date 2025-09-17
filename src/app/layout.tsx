@@ -23,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/fader.png" />
+      </head>
       {/* Apply the Inter font to the body */}
       <body className={`${inter.className} antialiased`}>
         <Header />
