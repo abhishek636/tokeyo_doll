@@ -38,7 +38,7 @@ const modules = [
 
 const ModulesSection = () => {
   return (
-    <section className="w-full max-w-full md:max-w-6xl mx-auto text-white mb-12">
+    <div className="w-full max-w-full md:max-w-6xl mx-auto text-white mb-12">
       <h2 className="text-center mb-2">Modules</h2>
       <p className="text-center mb-8">
         Thinking, vision, speech synthesis, gaming, etc.
@@ -142,7 +142,7 @@ const ModulesSection = () => {
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 

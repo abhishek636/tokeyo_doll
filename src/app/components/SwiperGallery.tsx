@@ -8,6 +8,7 @@ import 'swiper/css/effect-coverflow';
 import { Autoplay, EffectCoverflow } from 'swiper/modules';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Section } from 'lucide-react';
 
 export default function SwiperGallery() {
   useEffect(() => {
@@ -93,7 +94,7 @@ export default function SwiperGallery() {
   ));
 
   return (
-    <div className='md:py-20 py-10'>
+    <section className='md:py-20 py-10'>
       <h2 className='text-center block mb-16'>Meet Your AI Characters</h2>
       <div className="relative w-full mx-auto 2xl:h-[785px] xl:h-[810px] lg:h-[745px] sm:h-[856px] h-[684px] flex items-center">
         <div className="relative swiper-container max-w-[1300px] pt-[15px] mx-auto overflow-hidden">
@@ -118,6 +119,6 @@ export default function SwiperGallery() {
           Pick one to start, then make it truly yours
         </Link>
       </div>
-    </div>
+    </section>
   );
 }

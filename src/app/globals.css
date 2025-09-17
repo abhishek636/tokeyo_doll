@@ -126,3 +126,29 @@ body {
     }
  
   }
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth; /* smooth snap transition */
+}
+
+section {
+  min-height: 100vh;
+  font-size: 2rem;
+  scroll-snap-align: start;
+
+  /* initial state */
+  opacity: 1;
+  transform: translateY(50px);
+  transition: opacity .6s ease-out, transform .6s ease-out;
+}
+
+/* active section */
+section:target {
+  opacity: 1;
+  transform: translateY(0);
+}

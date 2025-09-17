@@ -34,7 +34,7 @@ const Step2 = () => {
                 scale: isActive ? 1.1 : 0.95,
               }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className={`w-64 h-16 flex items-center justify-center cursor-pointer
+              className={`w-64 h-12 flex items-center justify-center cursor-pointer
               ${isActive
                   ? "border-2 border-[#3B82F6] text-[#3B82F6] bg-black"
                   : "bg-[#2d2d2d] text-white/70"}

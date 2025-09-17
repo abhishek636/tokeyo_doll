@@ -17,8 +17,10 @@ export default function Home() {
        <AtTokyo />
        <HowItWorks />
        <Webelieve />
-       <ModulesSection />
+       <section>
+        <ModulesSection />
        <UnderDevelopmentSlider />
+       </section>
        <AICharacterSection />
        <FaqSection />
       </main>
