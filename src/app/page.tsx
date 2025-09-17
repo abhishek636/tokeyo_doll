@@ -5,6 +5,8 @@ import Webelieve from "./components/Webelieve";
 import HowItWorks from "./components/HowItWork/HowItWork";
 import ModulesSection from "./components/ModulesSection";
 import UnderDevelopmentSlider from "./components/UnderDevelopmentSection";
+import AICharacterSection from "./components/AICharacterSection";
+import FaqSection from "./components/FaqSection";
 export default function Home() {
   return (
     <div>
@@ -16,6 +18,8 @@ export default function Home() {
        <Webelieve />
        <ModulesSection />
        <UnderDevelopmentSlider />
+       <AICharacterSection />
+       <FaqSection />
       </main>
       
     </div>

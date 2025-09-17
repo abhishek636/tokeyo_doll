@@ -4,7 +4,7 @@ import { GradientLines } from "./Backgrounds/GradientLines"
 import ScrollReveal from "./ui/ScrollReveal "
 export default function AtTokyo() {
     return (
-        <GradientLines className="min-h-[800px]">
+        <GradientLines className="min-h-screen h-[800px]">
             <ScrollReveal
                 baseOpacity={0}
                 enableBlur={true}

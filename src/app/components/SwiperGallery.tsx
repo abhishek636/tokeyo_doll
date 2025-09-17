@@ -40,7 +40,7 @@ export default function SwiperGallery() {
           spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 2.5,
           spaceBetween: 30,
         },
       },
@@ -84,7 +84,7 @@ export default function SwiperGallery() {
           }}
         />
       </div>
-      <div className="text-content -mt-16 w-full text-center p-4 z-40 relative">
+      <div className="text-content -mt-12 w-full text-center p-4 z-40 relative">
         <p className="font-medium text-white text-3xl">{slide.title}</p>
         <p className="mt-2 text-sm text-center w-[55%] mx-auto">{slide.description}</p>
       </div>
@@ -99,18 +99,18 @@ export default function SwiperGallery() {
           <div className="swiper-wrapper h-full flex items-center">
             {slides}
           </div>
-          
+
         </div>
         <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] 2xl:w-[388px] xl:w-[400px] lg:w-[352px] sm:w-[438px] w-[338px]">
-            <Image
-              src="/iPhone14Pro.svg"
-              alt="Swiper frame decoration"
-              width={800}
-              height={600}
-              className="w-full h-full"
-              priority
-            />
-          </span>
+          <Image
+            src="/iPhone14Pro.svg"
+            alt="Swiper frame decoration"
+            width={800}
+            height={600}
+            className="w-full h-full"
+            priority
+          />
+        </span>
       </div>
       <div className='flex justify-center'>
         <Link href="#" className="px-9 py-3 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition mt-16">

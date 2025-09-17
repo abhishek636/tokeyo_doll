@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
                 />
             </div>
             {/* Character Video */}
-            {/* <div className="relative w-full max-w-md">
+            <div className="relative w-full max-w-md sm:hidden block">
                 <video
                     src="/videos/doll.mp4" 
                     autoPlay
@@ -37,8 +37,19 @@ const Hero: React.FC = () => {
                             "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 95.42%)",
                     }}
                 />
-            </div> */}
-             <img src="/videos/doll.gif" alt="Animated GIF" className="z-10"/>
+            </div>
+            <div className="relative w-full max-w-md sm:block hidden">
+                <img src="/videos/doll.gif" alt="Animated GIF" className="z-10"/>
+
+                <div
+                    className="absolute inset-0 pointer-events-none "
+                    style={{
+                        background:
+                            "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 95.42%)",
+                    }}
+                />
+            </div>
+             
 
             {/* Headline */}
             <h1 className="sm:mt-8 mt-4 text-white">
@@ -46,7 +57,7 @@ const Hero: React.FC = () => {
             </h1>
 
             {/* Subtext */}
-            <p className="mt-4 text-gray-300">
+            <p className="mt-4 text-white">
                 Choose a character, customize their world, and start real conversations powered by AI.
             </p>
 
@@ -59,11 +70,10 @@ const Hero: React.FC = () => {
                     href="#"
                     className="relative sm:px-9 z-40 sm:py-3 text-[#0071E3] text-lg
                    rounded-full border border-blue-500 
-                   hover:text-white hover:bg-blue-600/20
+                   hover:text-white
                    transition-all duration-300 ease-in-out
                    shadow-[0_0_15px_rgba(0,0,255,0.5)] 
-                   hover:shadow-[0_0_25px_rgba(0,0,255,0.8)]
-                   backdrop-blur-sm text-sm px-6 py-3"
+                   backdrop-blur-sm text-sm px-6 py-3 hover:bg-[#0071E3]"
                 >
                     Visit Livestream
                 </Link>
