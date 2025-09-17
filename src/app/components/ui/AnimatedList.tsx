@@ -16,12 +16,12 @@ export interface AnimatedListProps extends ComponentPropsWithoutRef<"div"> {
 
 export const AnimatedList = React.memo(
   ({ children, className, activeIndex, ...props }: AnimatedListProps) => {
-    // Only keep valid ReactElements
-    const childrenArray = useMemo(
-      () =>
-        React.Children.toArray(children).filter(isValidElement) as ReactElement[],
-      [children]
-    );
+    // ✅ Keep only valid ReactElements with correct typing
+    const childrenArray = useMemo(() => {
+      return React.Children.toArray(children).filter((child): child is ReactElement =>
+        isValidElement(child)
+      );
+    }, [children]);
 
     // Rotate list based on activeIndex
     const rotatedArray = useMemo(() => {
@@ -37,8 +37,7 @@ export const AnimatedList = React.memo(
         {...props}
       >
         {rotatedArray.map((item, i) => {
-          const isActive = i === 1; // always highlight the 2nd item
-          const element = item as ReactElement; // ✅ safe cast
+          const isActive = i === 1; // highlight the 2nd item
 
           return (
             <div
@@ -50,7 +49,8 @@ export const AnimatedList = React.memo(
                   : "bg-[#2A2A2A] text-white border border-transparent"
               )}
             >
-              {element.props.children}
+              {/* ✅ Safe access to children since we filtered for ReactElement */}
+              {React.isValidElement(item) && item.props.children}
             </div>
           );
         })}
