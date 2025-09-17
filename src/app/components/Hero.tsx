@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
             </motion.div>
 
             {/* Subtext */}
-            <p className="mt-4 text-white">
+            <p className="mt-4 text-white z-20 relative sm:px-0 px-2">
                 Choose a character, customize their world, and start real conversations
                 powered by AI.
             </p>
