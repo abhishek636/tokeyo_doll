@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 
 const Hero: React.FC = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center bg-[#111111] text-center sm:px-4 sm:py-20 py-16" id="home">
+        <section className="relative flex flex-col items-center justify-center bg-[#111111] text-center sm:px-4 sm:py-20 py-8" id="home">
             {/* Sparkles Background */}
             <div className="w-full absolute inset-0 bg-[#111111] h-full">
                 <SparklesCore
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Character Image/GIF */}
-            <div className="relative w-full max-w-md">
+            <div className="relative w-full sm:max-w-md max-w-sm">
                 <img
                     src="/videos/doll.gif"
                     alt="Animated GIF"
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
             {/* Headline */}
             {/* <h1 className="sm:mt-8 mt-4 text-white">AI Streamer Launchpad</h1> */}
             <motion.div className="relative  flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
-                <h1 className="sm:mt-8 mt-4 text-white">AI&nbsp; 
+                <h1 className="sm:mt-8 mt-2 text-white relative z-40">AI&nbsp; 
                     <LayoutTextFlip
                         text=""
                         words={["Streamer", "Friend", "Buddy", "Gamer", "Creator","Companion","Baddie","Helper","Assistant"]}
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
             </motion.div>
 
             {/* Subtext */}
-            <p className="mt-4 text-white z-20 relative sm:px-0 px-2">
+            <p className="sm:mt-4 mt-2 text-white z-20 relative sm:px-0 px-2">
                 Choose a character, customize their world, and start real conversations
                 powered by AI.
             </p>
