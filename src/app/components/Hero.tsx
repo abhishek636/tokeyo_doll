@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Hero: React.FC = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center text-center sm:px-4 sm:py-20 py-16">
+        <section className="relative flex flex-col items-center justify-center text-center sm:px-4 sm:py-20 py-16" id="home">
             {/* Sparkles Background */}
             <div className="w-full absolute inset-0 h-full">
                 <SparklesCore

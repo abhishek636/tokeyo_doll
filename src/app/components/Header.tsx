@@ -9,11 +9,12 @@ export default function Header() {
   const pathname = usePathname();
  
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Features", href: "/features" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#features" },
+    { name: "AI Characters", href: "#ai" },
+    { name: "How It Works", href: "#work" },
+    { name: "Modules", href: "#modules" },
+    {name: "FAQ", href: "#faq"},
   ];
  
   return (

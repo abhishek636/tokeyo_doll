@@ -63,6 +63,7 @@ const TokyoIntelligenceSection = () => {
         <section
             className="relative max-w-[1300px] mx-auto text-white pt-16 mb-16 px-4 select-none bg-cover bg-no-repeat bg-center overflow-hidden"
             style={{ backgroundImage: 'url(/bg-inte.png)' }}
+            id='ai'
         >
             <h2 className="text-center text-white mb-12">Tokyo Intelligence</h2>
  
@@ -151,4 +152,5 @@ const TokyoIntelligenceSection = () => {
 };
  
 export default TokyoIntelligenceSection;
+ 
  

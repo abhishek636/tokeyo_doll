@@ -44,7 +44,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="text-white md:py-16 py-10 px-4 sm:px-6 lg:px-8">
+    <section className="text-white md:py-16 py-10 px-4 sm:px-6 lg:px-8" id="faq">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-6 text-center md:text-left">
           <h2 className="md:text-5xl text-3xl md:leading-15 leading-10 ">

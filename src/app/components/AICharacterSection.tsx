@@ -6,7 +6,7 @@ export default function AICharacterSection() {
     const videoRef = useRef(null);
 
     return (
-        <section className="md:py-16 py-10">
+        <section className="md:py-16 py-10 bg-[#111111]">
             <div className='relative overflow-hidden flex items-center '>
                 <div className="relative container mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-6 lg:gap-10 items-center">

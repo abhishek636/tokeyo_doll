@@ -5,7 +5,7 @@ import Step3 from './Step3';
  
 const HowItWorks = () => {
   return (
-    <section className="py-20 bg-[#111111] relative overflow-hidden">
+    <section className="py-20 bg-[#111111] relative overflow-hidden" id='work'>
       <div className="max-w-[1332px] mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-white mb-4">
