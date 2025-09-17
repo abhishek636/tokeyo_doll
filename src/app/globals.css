@@ -28,32 +28,32 @@ body {
 @layer base {
   /* H1 */
   h1 {
-    @apply text-[32px] md:text-[64px] lg:text-[96px] font-medium leading-none;
+    @apply text-[32px] md:text-[64px] lg:text-[96px] font-medium leading-none tracking-tighter;
   }
 
   /* H2 */
   h2 {
-    @apply text-[24px] md:text-[40px] lg:text-[64px] font-medium leading-snug;
+    @apply text-[24px] md:text-[40px] lg:text-[64px] font-medium leading-none tracking-tighter;
   }
 
   /* H3 */
   h3 {
-    @apply text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-snug;
+    @apply text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-none tracking-tighter;
   }
 
   /* H5 */
   h5 {
-    @apply text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-snug;
+    @apply text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-none tracking-tighter;
   }
 
   /* H6 */
   h6 {
-    @apply text-[14px] md:text-[16px] lg:text-[18px] font-medium leading-snug;
+    @apply text-[14px] md:text-[16px] lg:text-[18px] font-medium leading-none tracking-tighter;
   }
 
   /* Paragraph */
   p {
-    @apply text-[16px] md:text-[17px] lg:text-[24px] leading-relaxed;
+    @apply text-[16px] md:text-[17px] lg:text-[24px] leading-none tracking-tighter;
   }
 }
 
