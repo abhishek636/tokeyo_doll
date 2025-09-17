@@ -37,7 +37,8 @@ export const AnimatedList = React.memo(
         {...props}
       >
         {rotatedArray.map((item, i) => {
-          const isActive = i === 1; // always highlight 2nd item
+          const isActive = i === 1; // always highlight the 2nd item
+          const element = item as ReactElement; // ✅ safe cast
 
           return (
             <div
@@ -49,7 +50,7 @@ export const AnimatedList = React.memo(
                   : "bg-[#2A2A2A] text-white border border-transparent"
               )}
             >
-              {item.props.children}
+              {element.props.children}
             </div>
           );
         })}
