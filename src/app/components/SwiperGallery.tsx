@@ -67,7 +67,7 @@ export default function SwiperGallery() {
   ];
 
   const slides = slidesData.concat(slidesData).map((slide, index) => (
-    <div key={index} className="swiper-slide flex justify-center items-center">
+    <div key={index} className="swiper-slide flex justify-center items-center bg-[#111111]">
       <div className="relative w-full max-w-sm mx-auto">
         <video
           src={slide.videoSrc}
