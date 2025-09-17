@@ -42,7 +42,7 @@ const slides = [
 const UnderDevelopmentSlider = () => {
   return (
     <section className="w-full max-w-full md:max-w-6xl mx-auto text-white">
-      <h2 className="text-center mb-6">Under Development</h2>
+      <h3 className="text-center mb-6">Under Development</h3>
       <div className="w-full overflow-hidden relative">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}

@@ -1,12 +1,13 @@
 "use client";
-
+ 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-
+import { usePathname } from "next/navigation";
+ 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname();
+ 
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Features", href: "/features" },
@@ -14,54 +15,78 @@ export default function Header() {
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
-
+ 
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
+    <header className="fixed top-0 left-0 w-full z-[70]">
       <div className="max-w-[1300px] mx-auto flex justify-between items-center sm:px-6 px-4 h-16">
         {/* Logo */}
-        <Link href="/" className="text-lg font-bold tracking-widest">
+        <Link href="/" className="text-lg text-white font-bold tracking-widest">
           PROJECT TOKYO
         </Link>
-
+ 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-sm">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="hover:text-gray-400 transition-colors"
+              className={`transition-colors uppercase ${
+                pathname === link.href
+                  ? "text-blue-500 underline"
+                  : "text-white hover:text-gray-400"
+              }`}
             >
               {link.name}
             </Link>
           ))}
         </nav>
-
+ 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 rounded-md hover:bg-gray-800"
+          className="relative w-8 h-8 flex items-center justify-center md:hidden z-[80]"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? (
+            // Cross (X)
+            <div className="relative w-6 h-6">
+              <span className="absolute left-0 top-1/2 w-6 h-[2px] bg-white rotate-45"></span>
+              <span className="absolute left-0 top-1/2 w-6 h-[2px] bg-white -rotate-45"></span>
+            </div>
+          ) : (
+            // Hamburger (two-line)
+            <div className="flex flex-col space-y-2">
+              <span className="block w-7 h-[2px] bg-white"></span>
+              <span className="block w-7 h-[2px] bg-white"></span>
+            </div>
+          )}
         </button>
       </div>
-
-      {/* Mobile Nav */}
-      {isOpen && (
-        <div className="md:hidden bg-black bg-opacity-95">
-          <nav className="flex flex-col space-y-4 p-4 text-sm">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="hover:text-gray-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
+ 
+      {/* Mobile Nav Drawer */}
+      <div
+        className={`fixed top-0 left-0 h-full w-full bg-black bg-opacity-95 transform transition-transform duration-300 ease-in-out md:hidden z-[60] ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <nav className="flex flex-col space-y-6 p-6 mt-16">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`transition-colors text-[24px] ml-10 font-bold ${
+                pathname === link.href
+                  ? "text-blue-500 "
+                  : "text-white hover:text-blue-500"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 }
+ 
+ 
