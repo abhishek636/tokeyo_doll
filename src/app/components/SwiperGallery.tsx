@@ -76,13 +76,14 @@ export default function SwiperGallery() {
           playsInline
           className="w-full h-auto object-cover rounded-[3rem] px-4 sm:px-0"
         />
-        <div
+        <Image src="/fader.png" width={1096} height={700} alt="hand" className="absolute bottom-0" />
+        {/* <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
               'linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 95.42%)',
           }}
-        />
+        /> */}
       </div>
       <div className="text-content -mt-12 w-full text-center p-4 z-40 relative">
         <p className="font-medium text-white text-3xl">{slide.title}</p>
