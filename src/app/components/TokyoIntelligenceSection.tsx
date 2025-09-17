@@ -13,7 +13,7 @@ const bottomTabs = [
 const TokyoIntelligenceSection = () => {
     return (
         <section
-            className=" relative max-w[1300px]  mx-auto text-white pt-16 mb-16 px-4 select-none bg-cover bg-no-repeat bg-center"
+            className=" relative max-w[1300px]  mx-auto text-white pt-16 mb-16 px-4 select-none bg-cover bg-no-repeat bg-center sm:block hidden"
             style={{ backgroundImage: 'url(/bg-inte.png)', }}
  
         >
