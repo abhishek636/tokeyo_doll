@@ -44,8 +44,8 @@ const Hero: React.FC = () => {
                 <div
                     className="absolute inset-0 pointer-events-none "
                     style={{
-                        background:
-                            "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 95.42%)",
+                        background: "linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 82.42%)"
+
                     }}
                 />
             </div>
