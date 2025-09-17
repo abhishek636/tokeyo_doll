@@ -67,7 +67,7 @@ export default function SwiperGallery() {
   ];
 
   const slides = slidesData.concat(slidesData).map((slide, index) => (
-    <div key={index} className="swiper-slide flex justify-center items-center bg-[#111111]">
+    <div key={index} className="swiper-slide flex justify-center items-center">
       <div className="relative w-full max-w-sm mx-auto">
         <video
           src={slide.videoSrc}
@@ -94,7 +94,7 @@ export default function SwiperGallery() {
   ));
 
   return (
-    <section className='md:py-20 py-10' id='features'>
+    <section className='md:py-20 py-10 bg-[#111111]' id='features'>
       <h2 className='text-center block mb-16'>Meet Your AI Characters</h2>
       <div className="relative w-full mx-auto 2xl:h-[785px] xl:h-[810px] lg:h-[745px] sm:h-[856px] h-[684px] flex items-center">
         <div className="relative swiper-container max-w-[1300px] pt-[15px] mx-auto overflow-hidden">
