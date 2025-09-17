@@ -7,6 +7,7 @@ import ModulesSection from "./components/ModulesSection";
 import UnderDevelopmentSlider from "./components/UnderDevelopmentSection";
 import AICharacterSection from "./components/AICharacterSection";
 import FaqSection from "./components/FaqSection";
+import TokyoIntelligenceSection from "./components/TokyoIntelligenceSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
        <Hero />
        <SwiperGallery />
        <AtTokyo />
+       <TokyoIntelligenceSection />
        <HowItWorks />
        <Webelieve />
        <section>

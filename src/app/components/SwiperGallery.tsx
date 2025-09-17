@@ -87,7 +87,7 @@ export default function SwiperGallery() {
         /> */}
       </div>
       <div className="text-content -mt-12 w-full text-center p-4 z-40 relative z-20">
-        <p className="font-medium text-white text-3xl">{slide.title}</p>
+        <p className="font-medium text-white text-3xl z-50">{slide.title}</p>
         <p className="mt-2 text-sm text-center w-[55%] mx-auto">{slide.description}</p>
       </div>
     </div>
