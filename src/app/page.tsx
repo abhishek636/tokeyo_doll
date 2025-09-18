@@ -7,7 +7,7 @@ import ModulesSection from "./components/ModulesSection";
 import UnderDevelopmentSlider from "./components/UnderDevelopmentSection";
 import AICharacterSection from "./components/AICharacterSection";
 import FaqSection from "./components/FaqSection";
-import TokyoIntelligenceSection from "./components/TokyoIntelligenceSection";
+// import TokyoIntelligenceSection from "./components/TokyoIntelligenceSection";
 import NewAiAnimate from "./components/NewAiAnimate";
 import MobilePillTabs from "./components/MobilePillTabs";
 
@@ -33,15 +33,15 @@ export default function Home() {
        <Hero />
        <SwiperGallery />
        <AtTokyo />
-       <TokyoIntelligenceSection />
+       {/* <TokyoIntelligenceSection /> */}
+       <NewAiAnimate />
+       <MobilePillTabs pills={pills} bottomTabs={bottomTabs} />
        <HowItWorks />
        <Webelieve />
        <section className="bg-black sm:py-20 py-16" id="modules">
         <ModulesSection />
        <UnderDevelopmentSlider />
        </section>
-       <NewAiAnimate />
-       <MobilePillTabs pills={pills} bottomTabs={bottomTabs} />
        <AICharacterSection />
        <FaqSection />
       </main>

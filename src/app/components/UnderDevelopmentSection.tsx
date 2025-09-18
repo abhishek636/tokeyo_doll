@@ -80,7 +80,8 @@ const UnderDevelopmentSlider = () => {
         >
           {slides.map(({ id, title, subtitle, icon }) => (
             <SwiperSlide key={id}>
-              <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[320px]">
+              <div className="backdrop-blur-2xl bg-gradient-to-tl from-white/5 via-white/2 to-transparent border border-[2px] border-gray-600/15 rounded-2xl  overflow-hidden
+  p-6 flex flex-col items-center gap-4 min-h-[320px]">
                 <div className="md:w-[138px] md:h-[138px] w-[98px] h-[98px] flex items-center justify-center">{icon}</div>
                 <div className="text-center">
                   <h3 className="font-bold text-lg mb-2">{title}</h3>

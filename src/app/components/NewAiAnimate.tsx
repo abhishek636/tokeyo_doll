@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
  
 gsap.registerPlugin(ScrollTrigger);
  
@@ -72,7 +73,8 @@ const NewAiAnimate = () => {
             });
  
             // Doll animation first
-            tl.to('.doll', { scale: 1, opacity: 1, duration: 1 }, 0);
+            // tl.to('.doll', { scale: 1, opacity: 1, duration: 1 }, 0);
+             tl.fromTo('.doll', { y: 300, scale: 0.8, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 1 }, 0);
  
             // Bottom tabs appear
             tl.to('.bottom-tab', { y: 0, opacity: 1, stagger: 0.2, duration: 1 }, 0.5);
@@ -103,16 +105,17 @@ const NewAiAnimate = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative mx-auto text-white pt-16 mb-16 px-4 select-none bg-cover bg-no-repeat bg-center overflow-hidden h-screen sm:block hidden"
-            style={{ backgroundImage: 'url(/bg-inte.png)' }}
+            className="relative mx-auto text-white pt-16 px-4 select-none bg-cover overflow-hidden h-screen sm:block hidden"
+           
             id='ai'
         >
+            <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
             <h2 className="text-center text-white mb-12">Tokyo Intelligence</h2>
  
-            <div className="relative flex justify-center items-center px-4 min-h-[500px]">
+            <div className="relative flex justify-center items-center px-4 h-full">
  
                 {/* Left Pills Container (Desktop/Wide Screens) */}
-                <div ref={leftPillsRef} className="absolute inset-0 hidden md:block">
+                <div ref={leftPillsRef} className="absolute inset-0 hidden md:block z-20">
                     {leftPills.map((pill, idx) => (
                         <Pill
                             key={idx}
@@ -124,7 +127,7 @@ const NewAiAnimate = () => {
                 </div>
  
                 {/* Right Pills Container (Desktop/Wide Screens) */}
-                <div ref={rightPillsRef} className="absolute inset-0 hidden md:block">
+                <div ref={rightPillsRef} className="absolute inset-0 hidden md:block z-20">
                     {rightPills.map((pill, idx) => (
                         <Pill
                             key={idx}
@@ -136,30 +139,17 @@ const NewAiAnimate = () => {
                     ))}
                 </div>
  
-                {/* Mobile/Tablet Pills Container */}
-                <div className="absolute inset-0 flex md:hidden justify-between items-center px-4">
-                    <div className="flex flex-col space-y-4 pt-16 pb-16">
-                        {leftPills.slice(0, 3).map((pill, idx) => (
-                            <Pill key={idx} label={pill.label} gif={pill.gif} className="relative !left-0 !top-0 z-30" />
-                        ))}
-                    </div>
-                    <div className="flex flex-col space-y-4 pt-16 pb-16">
-                        {rightPills.slice(0, 3).map((pill, idx) => (
-                            <Pill key={idx} label={pill.label} gif={pill.gif} isRight={true} className="relative !right-0 !top-0 z-30" />
-                        ))}
-                    </div>
-                </div>
- 
                 {/* Doll Video */}
-                <div className="relative z-20 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[495px] mx-auto">
-                    <img src="/videos/doll.gif" alt="doll" className='doll w-full' />
+                <div className="relative w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[495px] mx-auto">
+                    {/* <img src="/videos/doll.gif" alt="doll" className='doll w-full' /> */}
+                    <video src="/videos/Aiagent.mp4" autoPlay loop muted  className='doll'></video>
                 </div>
             </div>
  
             {/* Bottom Tabs */}
             <div
                 ref={bottomTabsRef}
-                className="bottom-tabs mt-16 relative flex flex-wrap justify-center gap-3 md:gap-6 px-2 md:px-6 backdrop-blur-md overflow-hidden max-w-full mx-auto"
+                className="bottom-tabs absolute bottom-0 z-30 left-0 right-0 flex flex-wrap justify-center gap-3 md:gap-6 px-2 md:px-6 overflow-hidden max-w-full mx-auto"
             >
                 {/* Gradient Overlay */}
                 {/* <div ref={gradientOverlayRef} className="gradient-overlay absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-blue-400/20 to-transparent opacity-0 z-10"></div> */}
@@ -181,18 +171,10 @@ const NewAiAnimate = () => {
                     </button>
                 ))}
             </div>
- 
-            {/* Background Mask/Particles */}
-            <div className="absolute inset-0 pointer-events-none z-1">
-                <img
-                    src={"/assets/images/tech-mask.png"}
-                    alt="Particles"
-                    className="w-full h-full object-cover opacity-20 absolute top-0 bottom-0 start-0 end-0 z-2"
-                />
-            </div>
         </section>
     );
 };
  
 export default NewAiAnimate;
+ 
  
