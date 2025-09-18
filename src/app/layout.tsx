@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Corrected import to use Inter font
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import LoaderWrapper from "./components/ui/LoaderWrapper";
 
-// Initialize the Inter font
+// Initialize Inter font
 const inter = Inter({
   subsets: ["latin"],
-  display: "swap", // Recommended for better performance
-  variable: "--font-inter", // Optional: to use with CSS variables
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -26,11 +27,12 @@ export default function RootLayout({
       <head>
         <link rel="preload" as="image" href="/fader.png" />
       </head>
-      {/* Apply the Inter font to the body */}
       <body className={`${inter.className} antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <LoaderWrapper/>
+          <Header />
+          {children}
+          <Footer />
+        
       </body>
     </html>
   );

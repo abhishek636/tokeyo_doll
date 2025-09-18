@@ -92,13 +92,13 @@ const NewAiAnimate = () => {
  
     const Pill: React.FC<PillProps> = ({ label, gif, isRight = false, className = '' }) => (
         <div
-            className={`pill ${isRight ? 'right-pill' : 'left-pill'} absolute flex items-center space-x-3 bg-[#FFFFFF1A] rounded-full px-4 py-2 backdrop-blur-sm ${className}`}
+            className={`pill ${isRight ? 'right-pill' : 'left-pill'} absolute flex items-center space-x-3 bg-[#FFFFFF1A] rounded-full px-5 py-2 backdrop-blur-sm ${className}`}
         >
-            {!isRight && <span className="text-sm font-medium">{label}</span>}
+            {!isRight && <span className="text-sm font-medium pr-2">{label}</span>}
             <span className="w-[42px] h-[42px] flex items-center justify-center bg-[#2388FF] rounded-full flex-shrink-0">
                 <img src={gif} alt={label} width={28} height={28} className='w-7 h-7' />
             </span>
-            {isRight && <span className="text-sm font-medium">{label}</span>}
+            {isRight && <span className="text-sm font-medium pl-2">{label}</span>}
         </div>
     );
  
