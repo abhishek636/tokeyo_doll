@@ -11,28 +11,28 @@ const Step3 = () => {
                     <div className='max-w-[120px]'>
                         <div className="relative w-full max-w-sm mx-auto overflow-hidden">
                             <video
-                                src="/videos/doll.mp4"
+                                src="/videos/step3.mp4"
                                 autoPlay
                                 loop
                                 muted
                                 playsInline
-                                className="w-full h-full object-cover rounded-lg scale-180"
+                                className="w-full h-full object-cover rounded-lg rounded-sm"
                             />
-                            <div
+                            {/* <div
                                 className="absolute inset-0 pointer-events-none scale-150"
                                 style={{
                                     background:
                                         'linear-gradient(180deg, rgba(17, 17, 17, 0) 35.17%, #111111 95.42%)',
                                 }}
-                            />
+                            /> */}
                         </div>
-                        <div className="text-content -mt-16 w-full text-center p-4 z-40 relative">
+                        {/* <div className="text-content -mt-16 w-full text-center p-4 z-40 relative">
                             <p className="font-medium text-white text-[10px]">Kai</p>
                             <p className="mt-1 text-[6px] text-center w-[95%] mx-auto">Energetic & fun, perfect for gaming and casual chats.</p>
-                        </div>
+                        </div> */}
 
                     </div>
-                    <span className="absolute top-1/2 left-0 -translate-y-1/2 z-10">
+                    {/* <span className="absolute top-1/2 left-0 -translate-y-1/2 z-10">
                         <Image
                             src="/iPhone14Pro.svg"
                             alt="Swiper frame decoration"
@@ -40,7 +40,7 @@ const Step3 = () => {
                             height={300}
                             priority
                         />
-                    </span>
+                    </span> */}
                 </div>
             </div>
 

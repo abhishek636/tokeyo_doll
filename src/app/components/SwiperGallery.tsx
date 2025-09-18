@@ -103,7 +103,7 @@ export default function SwiperGallery() {
           </div>
 
         </div>
-        <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 2xl:w-[388px] xl:w-[400px] lg:w-[352px] sm:w-[438px] w-[338px]">
+        <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 2xl:w-[388px] xl:w-[400px] lg:w-[352px] sm:w-[438px] w-[280px]">
           <Image
             src="/iPhone14Pro.svg"
             alt="Swiper frame decoration"

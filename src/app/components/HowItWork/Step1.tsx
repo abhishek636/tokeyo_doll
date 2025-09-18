@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 
 const Step1 = () => {
   const modules = [
-    { id: 1, video: "/videos/doll2.mp4", title: "Modules" },
-    { id: 2, video: "/videos/doll.mp4", title: "Modules" },
-    { id: 3, video: "/videos/doll3.mp4", title: "Modules" },
+    { id: 1, video: "/videos/doll2.mp4", title: "Kai" },
+    { id: 2, video: "/videos/doll.mp4", title: "Aria" },
+    { id: 3, video: "/videos/doll3.mp4", title: "Luna" },
   ];
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -131,7 +131,7 @@ const Step1 = () => {
       ></div>
 
       {/* Character Section */}
-      <div className="flex justify-center items-center gap-3 pt-16">
+      <div className="flex justify-center items-center gap-3 sm:pt-16 pt-8">
         {modules.map((module) => (
           <div
             key={module.id}
