@@ -17,7 +17,7 @@ const slides = [
     id: 2,
     title: 'Short-Term Memory',
     subtitle: 'Short-term memory specific setting and management',
-    icon: (<img src="/assets/gifs/memory.gif" alt="Consciousness Icon" width="98" height="98" />),
+    icon: (<img src="/assets/gifs/shortTerm.gif" alt="Consciousness Icon" width="98" height="98" />),
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const UnderDevelopmentSlider = () => {
       <div className="w-full overflow-hidden relative">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={20}
           dir="rtl"
           autoplay={{ 
             delay: 1000, 

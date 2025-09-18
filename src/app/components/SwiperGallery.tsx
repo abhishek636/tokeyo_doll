@@ -94,7 +94,7 @@ export default function SwiperGallery() {
   ));
 
   return (
-    <section className='md:py-20 py-10 bg-[#111111]' id='features'>
+    <section className='md:py-20 py-10 bg-[#111111] max-h-screen' id='features'>
       <h2 className='text-center block sm:mb-16 mb-8'>Meet Your AI Characters</h2>
       <div className="relative w-full mx-auto 2xl:h-[785px] xl:h-[810px] lg:h-[745px] sm:h-[856px] h-[684px] flex items-center">
         <div className="relative swiper-container max-w-[1300px] pt-[15px] mx-auto overflow-hidden">

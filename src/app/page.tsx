@@ -8,6 +8,23 @@ import UnderDevelopmentSlider from "./components/UnderDevelopmentSection";
 import AICharacterSection from "./components/AICharacterSection";
 import FaqSection from "./components/FaqSection";
 import TokyoIntelligenceSection from "./components/TokyoIntelligenceSection";
+import NewAiAnimate from "./components/NewAiAnimate";
+import MobilePillTabs from "./components/MobilePillTabs";
+
+const pills = [
+  { label: 'Models', gif: '/assets/gifs/models.gif' },
+  { label: 'Scene', gif: '/assets/gifs/scene.gif' },
+  { label: 'Modules', gif: '/assets/gifs/modules.gif' },
+  { label: 'Memory', gif: '/assets/gifs/memory.gif' },
+  { label: 'Providers', gif: '/assets/gifs/providers.gif' },
+  { label: 'System', gif: '/assets/gifs/system.gif' },
+];
+
+const bottomTabs = [
+  'Construct Behavioral Architecture',
+  'Fuse Personality with Digital Embodiment',
+  'Deploy Agent into Immersive Ecosystems',
+];
 
 export default function Home() {
   return (
@@ -23,6 +40,8 @@ export default function Home() {
         <ModulesSection />
        <UnderDevelopmentSlider />
        </section>
+       <NewAiAnimate />
+       <MobilePillTabs pills={pills} bottomTabs={bottomTabs} />
        <AICharacterSection />
        <FaqSection />
       </main>

@@ -30,9 +30,21 @@ const modules = [
   },
   {
     id: 4,
+    title: 'Consciousness',
+    subtitle: 'Personality, desired model, etc.',
+    icon: (<img src="/assets/gifs/consciousness.gif" alt="Consciousness Icon" width="98" height="98" />),
+  },
+  {
+    id: 5,
     title: 'Speech',
     subtitle: 'Speech synthesis',
     icon: (<img src="/assets/gifs/speech.gif" alt="Consciousness Icon" width="98" height="98" />),
+  },
+  {
+    id: 6,
+    title: 'Hearing',
+    subtitle: 'Configure how speech recognition works',
+    icon: (<img src="/assets/gifs/hearing.gif" alt="Consciousness Icon" width="98" height="98" />),
   },
 ];
 
@@ -99,13 +111,13 @@ const ModulesSection = () => {
             }}
             speed={2500}
             spaceBetween={20}
-            slidesPerView={3}
+            slidesPerView={4}
             loop={true}
             className="mySwiper w-full"
           >
             {modules.map(({ id, title, subtitle, icon }) => (
               <SwiperSlide key={id}>
-                <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 min-h-[280px]">
+                <div className="backdrop-blur-xl bg-white/10 border border-gray-700 rounded-lg p-6 flex flex-col items-center gap-4 sm:min-h-[313px] min-h-[280px]">
                   <div className="h-[138px] w-[138px] flex items-center justify-center">{icon}</div>
                   <div className="text-center">
                     <h3 className="font-bold text-lg mb-2">{title}</h3>

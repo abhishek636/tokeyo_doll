@@ -34,18 +34,18 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300  ${
+      className={`sm:fixed top-0 left-0 w-full z-50 transition-colors duration-300  ${
         scrolled ? "bg-[#111111]" : "bg-transparent"
       }`}
     >
       <div className="max-w-[1300px] mx-auto flex justify-between items-center sm:px-6 px-4 h-16">
         {/* Logo */}
-        <Link href="/" className="text-lg text-white font-bold tracking-widest">
+        <Link href="/" className="sm:text-[34px] text-[20px] text-white font-bold tracking-widest">
           PROJECT TOKYO
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 text-sm">
+        <nav className="hidden md:flex space-x-6 text-[18px] tracking-tighter">
           {navLinks.map((link) => (
             <Link
               key={link.name}
