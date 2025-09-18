@@ -75,7 +75,7 @@ export default function SwiperGallery() {
           loop
           muted
           playsInline
-          className="w-full h-auto object-cover px-4 sm:px-0"
+          className="sm:w-full w-[280px] mx-auto h-auto object-cover  sm:px-0"
         />
     
         {/* <div
@@ -96,7 +96,7 @@ export default function SwiperGallery() {
   return (
     <section className='md:py-20 py-10 bg-[#111111] max-h-screen' id='features'>
       <h2 className='text-center block sm:mb-16 mb-8'>Meet Your AI Characters</h2>
-      <div className="relative w-full mx-auto 2xl:h-[785px] xl:h-[810px] lg:h-[745px] sm:h-[856px] h-[684px] flex items-center">
+      <div className="relative w-full mx-auto 2xl:h-[785px] xl:h-[810px] lg:h-[745px] sm:h-[856px] h-[567px] flex items-center">
         <div className="relative swiper-container max-w-[1300px] pt-[15px] mx-auto overflow-hidden">
           <div className="swiper-wrapper h-full flex items-center">
             {slides}
@@ -115,7 +115,7 @@ export default function SwiperGallery() {
         </span>
       </div>
       <div className='flex justify-center'>
-        <Link href="#" className="px-9 py-3 rounded-full bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition sm:mt-16 mt-12">
+        <Link href="#" className="px-9 py-3 rounded-full text-center bg-[#0071E3] hover:bg-blue-700 text-white text-sm md:text-base transition sm:mt-16 mt-12">
           Pick one to start, then make it truly yours
         </Link>
       </div>

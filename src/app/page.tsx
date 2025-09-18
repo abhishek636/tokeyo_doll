@@ -10,6 +10,7 @@ import FaqSection from "./components/FaqSection";
 // import TokyoIntelligenceSection from "./components/TokyoIntelligenceSection";
 import NewAiAnimate from "./components/NewAiAnimate";
 import MobilePillTabs from "./components/MobilePillTabs";
+import Section from "./components/ui/Section";
 
 const pills = [
   { label: 'Models', gif: '/assets/gifs/models.gif' },
@@ -30,22 +31,48 @@ export default function Home() {
   return (
     <div>
       <main>
-       <Hero />
-       <SwiperGallery />
-       <AtTokyo />
-       {/* <TokyoIntelligenceSection /> */}
-       <NewAiAnimate />
-       <MobilePillTabs pills={pills} bottomTabs={bottomTabs} />
-       <HowItWorks />
-       <Webelieve />
-       <section className="bg-black sm:py-20 py-16" id="modules">
-        <ModulesSection />
-       <UnderDevelopmentSlider />
-       </section>
-       <AICharacterSection />
-       <FaqSection />
+        {/* ✅ Wrap with Section for smooth fade/slide animation */}
+        <Section>
+          <Hero />
+        </Section>
+
+        <Section>
+          <SwiperGallery />
+        </Section>
+
+        <Section>
+          <AtTokyo />
+        </Section>
+
+        {/* ❌ Don’t wrap GSAP-pinned sections */}
+        <NewAiAnimate />
+
+        <MobilePillTabs pills={pills} bottomTabs={bottomTabs} />
+
+        {/* ✅ Continue wrapping others */}
+        <Section>
+          <HowItWorks />
+        </Section>
+
+        <Section>
+          <Webelieve />
+        </Section>
+
+        <Section>
+          <section className="bg-black sm:py-20 py-16" id="modules">
+            <ModulesSection />
+            <UnderDevelopmentSlider />
+          </section>
+        </Section>
+
+        <Section>
+          <AICharacterSection />
+        </Section>
+
+        <Section>
+          <FaqSection />
+        </Section>
       </main>
-      
     </div>
   );
 }
