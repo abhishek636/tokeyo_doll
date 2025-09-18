@@ -38,15 +38,15 @@ const NewAiAnimate = () => {
     const bottomTabsRef = useRef<HTMLDivElement>(null);
  
     const leftPills: PillData[] = [
-        { label: 'Models', gif: '/assets/gifs/models.gif', top: 'top-[20%]', mdTop: 'md:top-[50%]', left: 'left-0', mdLeft: 'md:left-36' },
-        { label: 'Scene', gif: '/assets/gifs/scene.gif', top: 'top-[45%]', mdTop: 'md:top-[35%]', left: 'left-0', mdLeft: 'md:left-51' },
-        { label: 'Modules', gif: '/assets/gifs/modules.gif', top: 'top-[70%]', mdTop: 'md:top-[20%]', left: 'left-0', mdLeft: 'md:left-66' },
+        { label: 'Models', gif: '/assets/gifs/models.gif', top: 'top-[20%]', mdTop: 'md:top-[50%]', left: 'left-0', mdLeft: 'md:left-[20%]' },
+        { label: 'Scene', gif: '/assets/gifs/scene.gif', top: 'top-[45%]', mdTop: 'md:top-[35%]', left: 'left-0', mdLeft: 'md:left-[25%]' },
+        { label: 'Modules', gif: '/assets/gifs/modules.gif', top: 'top-[70%]', mdTop: 'md:top-[20%]', left: 'left-0', mdLeft: 'md:left-[30%]' },
     ];
  
     const rightPills: PillData[] = [
-        { label: 'Memory', gif: '/assets/gifs/memory.gif', top: 'top-[20%]', mdTop: 'md:top-[50%]', right: 'right-0', mdRight: 'md:right-36' },
-        { label: 'Providers', gif: '/assets/gifs/providers.gif', top: 'top-[45%]', mdTop: 'md:top-[35%]', right: 'right-0', mdRight: 'md:right-51' },
-        { label: 'System', gif: '/assets/gifs/system.gif', top: 'top-[70%]', mdTop: 'md:top-[20%]', right: 'right-0', mdRight: 'md:right-66' },
+        { label: 'Memory', gif: '/assets/gifs/memory.gif', top: 'top-[20%]', mdTop: 'md:top-[50%]', right: 'right-0', mdRight: 'md:right-[20%]' },
+        { label: 'Providers', gif: '/assets/gifs/providers.gif', top: 'top-[45%]', mdTop: 'md:top-[35%]', right: 'right-0', mdRight: 'md:right-[25%]' },
+        { label: 'System', gif: '/assets/gifs/system.gif', top: 'top-[70%]', mdTop: 'md:top-[20%]', right: 'right-0', mdRight: 'md:right-[30%]' },
     ];
  
     useEffect(() => {
@@ -103,7 +103,7 @@ const NewAiAnimate = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative max-w-[1300px] mx-auto text-white pt-16 mb-16 px-4 select-none bg-cover bg-no-repeat bg-center overflow-hidden h-screen sm:block hidden"
+            className="relative mx-auto text-white pt-16 mb-16 px-4 select-none bg-cover bg-no-repeat bg-center overflow-hidden h-screen sm:block hidden"
             style={{ backgroundImage: 'url(/bg-inte.png)' }}
             id='ai'
         >
@@ -151,7 +151,7 @@ const NewAiAnimate = () => {
                 </div>
  
                 {/* Doll Video */}
-                <div className="relative z-20 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px] mx-auto">
+                <div className="relative z-20 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[495px] mx-auto">
                     <img src="/videos/doll.gif" alt="doll" className='doll w-full' />
                 </div>
             </div>
@@ -167,14 +167,14 @@ const NewAiAnimate = () => {
                     <button
                         key={idx}
                         className={`bottom-tab
-                            relative z-10 text-[10px] sm:text-xs text-white bg-[#FFFFFF1A]
+                            relative z-10 text-[10px] font-medium sm:text-[18px] text-white bg-[#FFFFFF1A]
                             px-4 py-3 sm:px-8 md:px-16 md:py-7
                             hover:bg-green-700 transition-colors flex-grow-0 min-w-0
-                            ${idx === 0 ? "rounded-l-[100px]" : ""}
-                            ${idx === 2 ? "rounded-r-[100px]" : ""}
-                            ${bottomTabs.length === 3 ? (idx === 1 ? 'rounded-none' : '') : ''}
+                            ${idx === 0 ? "rounded-l-[100px] " : ""}
+                            ${idx === 2 ? "rounded-r-[100px] " : ""}
+                            ${bottomTabs.length === 3 ? (idx === 1 ? 'rounded-[10px]' : '') : ''}
                             ${bottomTabs.length !== 3 ? 'rounded-full' : ''}
-                            sm:rounded-none ${idx === 0 ? "sm:rounded-l-[100px]" : ""} ${idx === 2 ? "sm:rounded-r-[100px]" : ""}
+                            sm:rounded-[10px] ${idx === 0 ? "sm:rounded-l-[100px] sm:rounded-r-[10px]" : ""} ${idx === 2 ? "sm:rounded-r-[100px] sm:rounded-l-[10px]" : ""}
                         `}
                     >
                         {tab}
