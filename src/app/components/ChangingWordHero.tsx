@@ -30,17 +30,26 @@ const ChangingWordHero = () => {
 
   return (
     <>
-        <h1 className=" text-white text-center relative z-10">
-          AI&nbsp;
+      <h1 className=" text-white text-center relative z-10">
+        AI&nbsp;
+        <span className="relative inline-block  text-white">
+          {/* White text (front layer) */}
+          <span className="relative z-10">
+            {words[index]}
+          </span>
+
+          {/* Gradient shadow behind */}
           <span
-            className={`bg-gradient-to-r from-[#E8E8F0] to-[#A3B2E9] bg-clip-text text-transparent inline-block transition-opacity duration-300 ${
-              fade ? "opacity-100" : "opacity-0"
-            }`}
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 blur-[12px] opacity-70
+               bg-[linear-gradient(108deg,#0894FF,#C959DD_34%,#FF2E54_68%,#FF9004)]
+               bg-clip-text text-transparent"
           >
             {words[index]}
           </span>
-          &nbsp;Launchpad
-        </h1>
+        </span>
+        &nbsp;Launchpad
+      </h1>
     </>
   );
 };

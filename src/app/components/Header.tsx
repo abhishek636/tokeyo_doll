@@ -64,7 +64,7 @@ export default function Header() {
           href="#home"
           className="sm:text-[34px] text-[20px] text-white font-bold tracking-widest"
         >
-          PROJECT TOKEYO
+          PROJECT TOKYO
         </Link>
 
         {/* Desktop Nav */}
