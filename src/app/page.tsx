@@ -74,7 +74,7 @@ export default function Home() {
         <Section>
           <FaqSection />
         </Section>
-
+        
       </main>
     </div>
   );

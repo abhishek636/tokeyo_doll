@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-black text-gray-300 py-12 md:py-24 z-30">
-            <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-12 lg:gap-16">
+        <footer className="bg-black text-gray-300 py-12 md:py-19 z-30">
+            <div className=" border-b border-white/20 pb-7.5">
+                <div className="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-12 lg:gap-16 max-w-[1360px]  mx-auto px-4 sm:px-6 lg:px-8">
 
                     {/* Left Section: Brand and Copyright */}
                     <div className="md:col-span-2 lg:col-span-2 flex flex-col md:items-start text-left">
@@ -58,6 +58,10 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='max-w-[1360px]  mx-auto px-4 sm:px-6 lg:px-8'>
+                <p className='text-[24px] font-medium text-white sm:mt-10 mt-5 sm:mb-4 mb-2'>Disclaimer</p>
+                <p className='sm:text-[20px] text-base font-normal text-[#a0a0a0] leading-5'>Tokiyo is an independent project and is not affiliated with, endorsed by, or officially connected to the city of Tokyo or any of its governing bodies.</p>
             </div>
         </footer>
     );
