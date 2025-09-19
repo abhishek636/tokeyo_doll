@@ -22,7 +22,7 @@ const HeroNew: React.FC = () => {
                 This feature is currently under development. Join the waitlist to get early access.
             </p>
             <p className="border border-[#2388FF] text-[#2388FF] z-20 relative px-6 py-1 mt-8.5 text-[14px] rounded-full ">COMING SOON</p>
-            <Image src="/assets/images/ainew.png" alt="Animated GIF" className="z-10 object-contain" width={890} height={727} />
+            <Image src="/assets/images/ainew.png" alt="Animated GIF" className="z-10 object-contain mt-12" width={890} height={727} />
         </section>
     );
 };

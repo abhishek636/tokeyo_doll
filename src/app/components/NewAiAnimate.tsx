@@ -105,12 +105,12 @@ const NewAiAnimate = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative mx-auto text-white pt-16 px-4 select-none bg-cover overflow-hidden max-h[953px] sm:block hidden"
+            className="relative mx-auto text-white pt-32 px-4 select-none bg-cover overflow-hidden max-h-screen sm:block hidden"
            
             id='ai'
         >
             <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
-            <h2 className="text-center text-white mb-12">Tokyo Intelligence</h2>
+            <h2 className="text-center text-white mb-28">Tokyo Intelligence</h2>
  
             <div className="relative flex justify-center items-center px-4 h-full max-w-[1300px] mx-auto">
  
@@ -140,7 +140,7 @@ const NewAiAnimate = () => {
                 </div>
  
                 {/* Doll Video */}
-                <div className="relative w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[495px] mx-auto">
+                <div className="relative w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[495px] mx-auto h-[625px]">
                     {/* <img src="/videos/doll.gif" alt="doll" className='doll w-full' /> */}
                     <video src="/videos/Aiagent.mp4" autoPlay loop muted  className='doll'></video>
                 </div>
@@ -158,7 +158,7 @@ const NewAiAnimate = () => {
                         key={idx}
                         className={`bottom-tab
                             relative z-10 text-[10px] font-medium sm:text-[18px] text-white bg-[#FFFFFF1A]
-                            px-4 py-3 sm:px-8 md:px-16 md:py-7
+                            px-4 py-3 sm:px-8 md:px-16 md:py-4
                             hover:bg-green-700 transition-colors flex-grow-0 min-w-0
                             ${idx === 0 ? "rounded-l-[100px] " : ""}
                             ${idx === 2 ? "rounded-r-[100px] " : ""}
