@@ -32,11 +32,12 @@ export default function Home() {
   return (
     <div>
       <main>
-      <Section>
-          <HeroNew />
-        </Section>
+        
         <Section>
           <Hero />
+        </Section>
+        <Section>
+          <HeroNew />
         </Section>
 
         <Section>
