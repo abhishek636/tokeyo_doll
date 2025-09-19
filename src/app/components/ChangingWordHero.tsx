@@ -33,7 +33,7 @@ const ChangingWordHero = () => {
         <h1 className=" text-white text-center relative z-10">
           AI&nbsp;
           <span
-            className={`text-white inline-block transition-opacity duration-300 ${
+            className={`bg-gradient-to-r from-[#E8E8F0] to-[#A3B2E9] bg-clip-text text-transparent inline-block transition-opacity duration-300 ${
               fade ? "opacity-100" : "opacity-0"
             }`}
           >

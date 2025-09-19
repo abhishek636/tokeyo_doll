@@ -1,10 +1,20 @@
 'use client';
- 
+
 import { useEffect, useRef } from 'react';
- 
+
 export default function Loader() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
- 
+
+  useEffect(() => {
+    // Prevent body scrolling when loader is active
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      // Restore scrolling when loader is removed
+      document.body.style.overflow = '';
+    };
+  }, []);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -146,7 +156,7 @@ export default function Loader() {
           background: #000;
           z-index: 9999;
         }
- 
+
         canvas {
           display: block;
         }

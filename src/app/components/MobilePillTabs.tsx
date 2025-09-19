@@ -58,7 +58,7 @@ export default function MobilePillTabs({ pills, bottomTabs }: MobilePillTabsProp
       id="ai"
     >
         <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
-        <h2 className="text-center text-white mb-32">Tokyo Intelligence</h2>
+        <h2 className="text-center text-white mb-32">Tokeyo Intelligence</h2>
       {/* Pills Section */}
       <div className="relative flex justify-center items-center px-4 ">
         <AnimatePresence mode="wait">
@@ -82,7 +82,7 @@ export default function MobilePillTabs({ pills, bottomTabs }: MobilePillTabsProp
         {/* Doll Image */}
         <div className="relative w-full h-full w-full sm:max-w-[350px] md:max-w-[400px] lg:max-w-[495px] mx-auto ">
             {/* <img src="/videos/doll.gif" alt="doll" className='doll w-full' /> */}
-            <video src="/videos/Aiagent.mp4" autoPlay loop muted  className='doll'></video>
+            <video src="/videos/Aiagent.mp4" autoPlay loop muted playsInline controls={false} className='doll'></video>
         </div>
       </div>
 

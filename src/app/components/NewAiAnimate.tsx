@@ -105,14 +105,14 @@ const NewAiAnimate = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative mx-auto text-white pt-16 px-4 select-none bg-cover overflow-hidden h-screen sm:block hidden"
+            className="relative mx-auto text-white pt-16 px-4 select-none bg-cover overflow-hidden max-h[953px] sm:block hidden"
            
             id='ai'
         >
             <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
             <h2 className="text-center text-white mb-12">Tokyo Intelligence</h2>
  
-            <div className="relative flex justify-center items-center px-4 h-full">
+            <div className="relative flex justify-center items-center px-4 h-full max-w-[1300px] mx-auto">
  
                 {/* Left Pills Container (Desktop/Wide Screens) */}
                 <div ref={leftPillsRef} className="absolute inset-0 hidden md:block z-20">

@@ -26,6 +26,7 @@ export default function AICharacterSection() {
                                         muted
                                         playsInline
                                         autoPlay
+                                        controls={false}
                                     >
                                         <source className='' src="/videos/doll2.mp4" type="video/mp4" />
                                         Your browser does not support the video tag.
@@ -35,11 +36,12 @@ export default function AICharacterSection() {
  
                         </div> */}
                         <video
-                            src="/videos/AICharactor.mp4" 
+                            src="/videos/AICharactor.mp4"
                             autoPlay
                             loop
                             muted
                             playsInline
+                            controls={false}
                             className="w-full h-auto object-contain"
                         />
  

@@ -75,6 +75,7 @@ export default function SwiperGallery() {
           loop
           muted
           playsInline
+          controls={false}
           className="sm:w-full w-[280px] mx-auto h-auto object-cover  sm:px-0"
         />
     

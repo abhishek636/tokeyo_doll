@@ -11,6 +11,7 @@ import FaqSection from "./components/FaqSection";
 import NewAiAnimate from "./components/NewAiAnimate";
 import MobilePillTabs from "./components/MobilePillTabs";
 import Section from "./components/ui/Section";
+import HeroNew from "./components/HerNew";
 
 const pills = [
   { label: 'Models', gif: '/assets/gifs/models.gif' },
@@ -31,7 +32,9 @@ export default function Home() {
   return (
     <div>
       <main>
-        {/* ✅ Wrap with Section for smooth fade/slide animation */}
+      <Section>
+          <HeroNew />
+        </Section>
         <Section>
           <Hero />
         </Section>
@@ -44,12 +47,10 @@ export default function Home() {
           <AtTokyo />
         </Section>
 
-        {/* ❌ Don’t wrap GSAP-pinned sections */}
         <NewAiAnimate />
 
         <MobilePillTabs pills={pills} bottomTabs={bottomTabs} />
 
-        {/* ✅ Continue wrapping others */}
         <Section>
           <HowItWorks />
         </Section>

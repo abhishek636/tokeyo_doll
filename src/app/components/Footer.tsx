@@ -10,7 +10,7 @@ export default function Footer() {
                     {/* Left Section: Brand and Copyright */}
                     <div className="md:col-span-2 lg:col-span-2 flex flex-col md:items-start text-left">
                         <Link href="/" className="text-[34px] font-bold text-white mb-4">
-                            PROJECT TOKYO
+                            PROJECT TOKEYO
                         </Link>
                         <p className='md:w-55 text-base w-full leading-6'>Copyright © 2025 PlayOS, Inc. All rights reserved</p>
                     </div>

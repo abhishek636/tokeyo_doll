@@ -16,6 +16,7 @@ const Step3 = () => {
                                 loop
                                 muted
                                 playsInline
+                                controls={false}
                                 className="w-full h-full object-cover rounded-lg rounded-sm"
                             />
                             {/* <div
