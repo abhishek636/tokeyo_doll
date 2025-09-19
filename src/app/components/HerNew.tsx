@@ -16,7 +16,7 @@ const HeroNew: React.FC = () => {
                     starCount={1000}
                     starColor={[255, 255, 255]}
                     speedFactor={0.05}
-                    backgroundColor="black"
+                    backgroundColor="#111111"
                 />
             <div className="w-full absolute inset-0 bg-[#111111] h-full">
                 
@@ -32,11 +32,11 @@ const HeroNew: React.FC = () => {
             </div>
 
             {/* Character Image/GIF */}
-            <div className="relative w-full sm:max-w-md max-w-sm">
+            <div className="relative w-full sm:max-w-md max-w-sm z-20">
                 <img
                     src="/videos/doll.gif"
                     alt="Animated GIF"
-                    className="z-10 w-full object-contain"
+                    className="z-20 w-full object-contain"
                 />
 
                 {/* Mobile fade overlay */}

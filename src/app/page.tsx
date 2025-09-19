@@ -36,9 +36,7 @@ export default function Home() {
         <Section>
           <Hero />
         </Section>
-        <Section>
-          <HeroNew />
-        </Section>
+        
 
         <Section>
           <SwiperGallery />
@@ -73,6 +71,9 @@ export default function Home() {
 
         <Section>
           <FaqSection />
+        </Section>
+        <Section>
+          <HeroNew />
         </Section>
       </main>
     </div>
