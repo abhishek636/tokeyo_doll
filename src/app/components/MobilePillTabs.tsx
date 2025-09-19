@@ -101,7 +101,7 @@ export default function MobilePillTabs({ pills, bottomTabs }: MobilePillTabsProp
               className="
               absolute
               -bottom-0
-                px-6 py-3
+                px-4 py-3
                 bg-white/10 text-white
                 rounded-full
                 shadow-lg
@@ -110,6 +110,7 @@ export default function MobilePillTabs({ pills, bottomTabs }: MobilePillTabsProp
                 w-full text-center
                 font-medium
                 z-30
+                text-[14px]
               "
             >
               {bottomTabs[activeTabIndex]}

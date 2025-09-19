@@ -58,7 +58,7 @@ export default function FaqSection() {
           </p>
           <p className="text-[#A0A0A0] w-full max-w-lg">
             Were here to make it clear—check out our FAQs, and if you still
-            feel the need to ask, AI questions, <b>Cassie</b> is always ready to
+            feel the need to ask, AI questions, Cassie is always ready to
             answer.
           </p>
         </div>
