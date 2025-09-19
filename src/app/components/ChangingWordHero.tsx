@@ -41,7 +41,7 @@ const ChangingWordHero = () => {
           {/* Gradient shadow behind */}
           <span
             aria-hidden="true"
-            className="absolute inset-0 -z-10 blur-[12px] opacity-70
+            className="absolute inset-0 -z-10 blur-[10px] opacity-100
                bg-[linear-gradient(108deg,#0894FF,#C959DD_34%,#FF2E54_68%,#FF9004)]
                bg-clip-text text-transparent"
           >
