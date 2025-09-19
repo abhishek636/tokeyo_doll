@@ -12,13 +12,14 @@ const HeroNew: React.FC = () => {
     return (
         <section className="relative flex flex-col items-center justify-center bg-[#111111] text-center sm:px-4 sm:py-20 py-8" id="home">
             {/* Sparkles Background */}
-            <div className="w-full absolute inset-0 bg-[#111111] h-full">
-                <Starfield
+            <Starfield
                     starCount={1000}
                     starColor={[255, 255, 255]}
                     speedFactor={0.05}
                     backgroundColor="black"
                 />
+            <div className="w-full absolute inset-0 bg-[#111111] h-full">
+                
                 {/* <SparklesCore
                     id="tsparticlesfullpage"
                     background="transparent"
