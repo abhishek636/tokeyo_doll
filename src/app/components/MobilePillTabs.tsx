@@ -58,7 +58,7 @@ export default function MobilePillTabs({ pills, bottomTabs }: MobilePillTabsProp
       id="ai"
     >
         <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
-        <h2 className="text-center text-white mb-32">Tokeyo Intelligence</h2>
+        <h2 className="text-center text-white mb-32">Tokyo Intelligence</h2>
       {/* Pills Section */}
       <div className="relative flex justify-center items-center px-4 ">
         <AnimatePresence mode="wait">

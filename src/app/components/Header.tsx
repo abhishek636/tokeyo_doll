@@ -54,7 +54,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 ${
         scrolled ? "bg-[#111111]" : "bg-transparent"
       } ${showHeader ? "translate-y-0" : "-translate-y-full"}`}
     >
