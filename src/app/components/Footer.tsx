@@ -12,7 +12,7 @@ export default function Footer() {
                         <Link href="/" className="text-[34px] font-bold text-white mb-4">
                             PROJECT TOKYO
                         </Link>
-                        <p className='md:w-55 w-full'>Copyright © 2025 PlayOS, Inc. All rights reserved</p>
+                        <p className='md:w-55 text-base w-full leading-8'>Copyright © 2025 PlayOS, Inc. All rights reserved</p>
                     </div>
 
                     {/* Right Sections: Navigation Links */}
@@ -21,7 +21,7 @@ export default function Footer() {
                         {/* Features Column */}
                         <div className="text-left">
                             <h4 className="text-lg font-semibold text-white mb-4">Features</h4>
-                            <ul className="space-y-3">
+                            <ul className="sm:space-y-4 pa space-y-3">
                                 <li><Link href="#home" className="hover:text-white text-[#BABABA] transition-colors duration-200">Home</Link></li>
                                 <li><Link href="#features" className="hover:text-white text-[#BABABA] transition-colors duration-200">About</Link></li>
                                 <li><Link href="#ai" className="hover:text-white text-[#BABABA] transition-colors duration-200">AI Characters</Link></li>
@@ -30,7 +30,7 @@ export default function Footer() {
 
                         {/* Resources Column */}
                         <div className="text-left">
-                            <ul className="space-y-3">
+                            <ul className="sm:space-y-5 space-y-3">
                                 <li><Link href="#work" className="hover:text-white text-[#BABABA] transition-colors duration-200">How It Works</Link></li>
                                 <li><Link href="#modules" className="hover:text-white transition-colors duration-200 text-[#BABABA]">Modules</Link></li>
                                 <li><Link href="#faq" className="hover:text-white transition-colors duration-200 text-[#BABABA]">Faq</Link></li>
@@ -40,7 +40,7 @@ export default function Footer() {
                         {/* About Us Column */}
                         <div className="text-left">
                             <h4 className="text-lg font-semibold text-white mb-4">About Us</h4>
-                            <ul className="space-y-3">
+                            <ul className="sm:space-y-5 space-y-3">
                                 <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">Become an Affiliate</Link></li>
                                 <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">Careers</Link></li>
                             </ul>
@@ -49,7 +49,7 @@ export default function Footer() {
                         {/* Support Column */}
                         <div className="text-left">
                             <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
-                            <ul className="space-y-3">
+                            <ul className="sm:space-y-5 space-y-3">
                                 <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">Help center</Link></li>
                                 <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">Contact</Link></li>
                                 <li><Link href="#" className="hover:text-white text-[#BABABA] transition-colors duration-200">Plans and Payments</Link></li>

@@ -11,13 +11,13 @@ const LoaderWrapper = () => {
       // Ensure loader shows for at least 5 seconds
       setTimeout(() => {
         setLoading(false);
-      }, 5000);
+      }, 1000);
     };
  
     if (document.readyState === 'complete') {
       setTimeout(() => {
         setLoading(false);
-      }, 5000);
+      }, 3000);
     } else {
       window.addEventListener('load', handleLoad);
     }

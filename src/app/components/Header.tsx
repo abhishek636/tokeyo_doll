@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
   const pathname = usePathname();
 
   const navLinks = [
@@ -18,14 +19,24 @@ export default function Header() {
     { name: "FAQ", href: "#faq" },
   ];
 
-  // Handle scroll background
+  // Handle scroll background + show/hide
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
+      const currentScrollY = window.scrollY;
+
+      // Add background after some scroll
+      setScrolled(currentScrollY > 50);
+
+      // Hide when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowHeader(false); // scrolling down
       } else {
-        setScrolled(false);
+        setShowHeader(true); // scrolling up
       }
+
+      lastScrollY = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,13 +45,16 @@ export default function Header() {
 
   return (
     <header
-      className={`sm:fixed top-0 left-0 w-full z-50 transition-colors duration-300  ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled ? "bg-[#111111]" : "bg-transparent"
-      }`}
+      } ${showHeader ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="max-w-[1300px] mx-auto flex justify-between items-center sm:px-6 px-4 h-16">
         {/* Logo */}
-        <Link href="/" className="sm:text-[34px] text-[20px] text-white font-bold tracking-widest">
+        <Link
+          href="/"
+          className="sm:text-[34px] text-[20px] text-white font-bold tracking-widest"
+        >
           PROJECT TOKYO
         </Link>
 
