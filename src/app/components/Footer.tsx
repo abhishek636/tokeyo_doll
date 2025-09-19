@@ -12,7 +12,7 @@ export default function Footer() {
                         <Link href="/" className="text-[34px] font-bold text-white mb-4">
                             PROJECT TOKYO
                         </Link>
-                        <p className='md:w-55 text-base w-full leading-8'>Copyright © 2025 PlayOS, Inc. All rights reserved</p>
+                        <p className='md:w-55 text-base w-full leading-6'>Copyright © 2025 PlayOS, Inc. All rights reserved</p>
                     </div>
 
                     {/* Right Sections: Navigation Links */}
