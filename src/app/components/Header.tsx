@@ -19,21 +19,21 @@ export default function Header() {
     { name: "FAQ", href: "#faq" },
   ];
 
-  // Handle scroll background + show/hide
+  // Handle scroll for reverse scroll header
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Add background after some scroll
+      // Background after scroll
       setScrolled(currentScrollY > 50);
 
-      // Hide when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setShowHeader(false); // scrolling down
-      } else {
+      // Show only on reverse scroll
+      if (currentScrollY < lastScrollY) {
         setShowHeader(true); // scrolling up
+      } else {
+        setShowHeader(false); // scrolling down
       }
 
       lastScrollY = currentScrollY;
@@ -42,6 +42,15 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isOpen]);
 
   return (
     <header
@@ -52,7 +61,7 @@ export default function Header() {
       <div className="max-w-[1300px] mx-auto flex justify-between items-center sm:px-6 px-4 h-16">
         {/* Logo */}
         <Link
-          href="/"
+          href="#home"
           className="sm:text-[34px] text-[20px] text-white font-bold tracking-widest"
         >
           PROJECT TOKEYO
@@ -102,7 +111,7 @@ export default function Header() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <nav className="flex flex-col space-y-6 p-6 mt-16">
+        <nav className="flex flex-col justify-center space-y-6 p-6 min-h-[100vh] bg-[#111111]">
           {navLinks.map((link) => (
             <Link
               key={link.name}

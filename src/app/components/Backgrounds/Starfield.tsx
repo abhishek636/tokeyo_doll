@@ -146,7 +146,7 @@ export default function Starfield(props: Props) {
         zIndex: 10,
         opacity: 1,
         pointerEvents: "none",
-        
+        display: "block",
       }}
     ></canvas>
   );
