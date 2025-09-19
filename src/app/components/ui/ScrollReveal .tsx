@@ -126,8 +126,8 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   ]);
 
   return (
-    <h2 ref={containerRef} className={`scroll-reveal ${containerClassName}`}>
-      <p className={`scroll-reveal-text ${textClassName} leading-5`}>
+    <h2 ref={containerRef} className={`scroll-reveal ${containerClassName} z-50 relative`}>
+      <p className={`scroll-reveal-text ${textClassName} leading-5 text-white z-50 relative`}>
         {typeof children === 'string' ? splitText : children}
       </p>
     </h2>
