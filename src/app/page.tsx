@@ -32,11 +32,11 @@ export default function Home() {
   return (
     <div>
       <main>
-        
+
         <Section>
           <Hero />
         </Section>
-        
+
 
         <Section>
           <SwiperGallery />
@@ -68,13 +68,13 @@ export default function Home() {
         <Section>
           <AICharacterSection />
         </Section>
-
-        <Section>
-          <FaqSection />
-        </Section>
         <Section>
           <HeroNew />
         </Section>
+        <Section>
+          <FaqSection />
+        </Section>
+
       </main>
     </div>
   );
