@@ -75,22 +75,22 @@ export default function SwiperComponent() {
           playsInline
           controls={false}
           className="sm:w-full w-[280px] mx-auto h-auto object-cover sm:px-0"
-          loading="lazy"
-          poster="/assets/images/placeholder.jpg" // Add a poster image
+          preload="none" // ✅ fixed: replaced loading="lazy"
+          poster="/assets/images/placeholder.jpg"
         />
       </div>
       <div className="text-content w-full text-center p-4 z-40 relative z-20">
         <p className="font-medium text-white text-3xl relative z-50">{slide.title}</p>
-        <p className="mt-2 text-sm text-[#A0A0A0] text-center w-[55%] mx-auto">{slide.description}</p>
+        <p className="mt-2 text-sm text-[#A0A0A0] text-center w-[55%] mx-auto">
+          {slide.description}
+        </p>
       </div>
     </div>
   ));
 
   return (
     <div className="relative swiper-container max-w-[1300px] pt-[15px] mx-auto overflow-hidden">
-      <div className="swiper-wrapper h-full flex items-center">
-        {slides}
-      </div>
+      <div className="swiper-wrapper h-full flex items-center">{slides}</div>
       <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 2xl:w-[388px] xl:w-[400px] lg:w-[352px] sm:w-[438px] w-[280px]">
         <Image
           src="/iPhone14Pro.svg"
