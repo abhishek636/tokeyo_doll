@@ -19,7 +19,7 @@ const Loader: React.FC<LoaderProps> = ({ size = 80, progress = 0 }) => {
   }, []);
 
   return (
-    <div className="h-screen w-screen bg-[#010101] fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden">
+    <div className="h-screen w-screen bg-[#000101] fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden">
       <div className="relative flex flex-col items-center space-y-4">
         <img
           src="/assets/gifs/loader.gif"
@@ -28,7 +28,7 @@ const Loader: React.FC<LoaderProps> = ({ size = 80, progress = 0 }) => {
         />
 
         {/* Progress Bar */}
-        {/* <div className="w-64 h-2 bg-gray-800 rounded-full overflow-hidden">
+        <div className="w-64 h-2 bg-gray-800 rounded-full overflow-hidden">
           <div
             className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-300 ease-out"
             style={{ width: `${progress}%` }}
@@ -37,7 +37,7 @@ const Loader: React.FC<LoaderProps> = ({ size = 80, progress = 0 }) => {
 
         <p className="text-white text-sm font-medium">
           Loading... {Math.round(progress)}%
-        </p> */}
+        </p>
       </div>
     </div>
   );

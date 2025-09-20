@@ -8,7 +8,6 @@ import 'swiper/css/effect-coverflow';
 import { Autoplay, EffectCoverflow } from 'swiper/modules';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Section } from 'lucide-react';
 
 export default function SwiperGallery() {
   useEffect(() => {
@@ -68,7 +67,7 @@ export default function SwiperGallery() {
 
   const slides = slidesData.concat(slidesData).map((slide, index) => (
     <div key={index} className="swiper-slide flex justify-center items-center">
-      <div className="relative w-full max-w-sm mx-auto">
+      <div className="relative w-full max-w-[300px] mx-auto">
         <video
           src={slide.videoSrc}
           autoPlay
@@ -95,16 +94,16 @@ export default function SwiperGallery() {
   ));
 
   return (
-    <section className='md:py-20 py-10 bg-[#111111] max-h-screen' id="ai">
+    <section className='md:py-20 py-10 bg-[#111111] max-h-screen min-h-screen' id="ai">
       <h2 className='text-center block sm:mb-16 mb-8'>Meet Your AI Characters</h2>
-      <div className="relative w-full mx-auto 2xl:h-[785px] xl:h-[810px] lg:h-[745px] sm:h-[856px] h-[567px] flex items-center">
+      <div className="relative w-full mx-auto 2xl:h-[600px] xl:h-[600px] lg:h-[600px] sm:h-[600px] h-[567px] flex items-center">
         <div className="relative swiper-container max-w-[1300px] pt-[15px] mx-auto overflow-hidden">
           <div className="swiper-wrapper h-full flex items-center">
             {slides}
           </div>
 
         </div>
-        <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 2xl:w-[388px] xl:w-[400px] lg:w-[352px] sm:w-[438px] w-[280px]">
+        <span className="slider-frame absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 2xl:w-[320px] xl:w-[320px] lg:w-[320px] sm:w-[320px] w-[280px]">
           <Image
             src="/iPhone14Pro.svg"
             alt="Swiper frame decoration"

@@ -44,7 +44,7 @@ const modules = [
 
 const Language = () => {
     return (
-        <div className='bg-[#000000] sm:pt-30 sm:pb-48 pt-16 pb-16'>
+        <div className='bg-[#000000] sm:pt-30 sm:pb-48 pt-16 pb-16 sm:min-h-screen'>
             <div className="w-full max-w-full md:max-w-6xl mx-auto text-white">
                 <h2 className="text-center mb-2 max-w-[880px] mx-auto mb-4 ms:px-0 px-4">Talk & give prompts in any language of your choice</h2>
                 <p className="text-center text-[#A0A0A0] mb-8 max-w-[761px] mx-auto sm:mb-22 ms:px-0 px-4">

@@ -13,6 +13,8 @@ const ChangingWordHero = () => {
     "Baddie",
     "Helper",
     "Assistant",
+    "Wifu",
+    "Girlfriend"
   ];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
