@@ -107,7 +107,7 @@ export default function Header() {
 
       {/* Mobile Nav Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-full bg-[#111111] transform transition-transform duration-300 ease-in-out md:hidden z-[60] ${
+        className={`fixed top-0 left-0 h-full w-full bg-[#111111] transform transition-transform duration-300 ease-in-out md:hidden z-40 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

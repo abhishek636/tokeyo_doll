@@ -1,18 +1,18 @@
 'use client';
- 
+
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
- 
+
 gsap.registerPlugin(ScrollTrigger);
- 
+
 const bottomTabs = [
     'Construct Behavioral Architecture',
     'Fuse Personality with Digital Embodiment',
     'Deploy Agent into Immersive Ecosystems',
 ];
- 
+
 interface PillData {
     label: string;
     gif: string;
@@ -23,33 +23,33 @@ interface PillData {
     right?: string;
     mdRight?: string;
 }
- 
+
 interface PillProps {
     label: string;
     gif: string;
     isRight?: boolean;
     className?: string;
 }
- 
+
 const NewAiAnimate = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const leftPillsRef = useRef<HTMLDivElement>(null);
     const rightPillsRef = useRef<HTMLDivElement>(null);
     const gradientOverlayRef = useRef<HTMLDivElement>(null);
     const bottomTabsRef = useRef<HTMLDivElement>(null);
- 
+
     const leftPills: PillData[] = [
         { label: 'Models', gif: '/assets/gifs/models.gif', top: 'top-[20%]', mdTop: 'md:top-[50%]', left: 'left-0', mdLeft: 'md:left-[20%]' },
         { label: 'Scene', gif: '/assets/gifs/scene.gif', top: 'top-[45%]', mdTop: 'md:top-[35%]', left: 'left-0', mdLeft: 'md:left-[25%]' },
         { label: 'Modules', gif: '/assets/gifs/modules.gif', top: 'top-[70%]', mdTop: 'md:top-[20%]', left: 'left-0', mdLeft: 'md:left-[30%]' },
     ];
- 
+
     const rightPills: PillData[] = [
         { label: 'Memory', gif: '/assets/gifs/memory.gif', top: 'top-[20%]', mdTop: 'md:top-[50%]', right: 'right-0', mdRight: 'md:right-[20%]' },
         { label: 'Providers', gif: '/assets/gifs/providers.gif', top: 'top-[45%]', mdTop: 'md:top-[35%]', right: 'right-0', mdRight: 'md:right-[25%]' },
         { label: 'System', gif: '/assets/gifs/system.gif', top: 'top-[70%]', mdTop: 'md:top-[20%]', right: 'right-0', mdRight: 'md:right-[30%]' },
     ];
- 
+
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Set initial states
@@ -58,7 +58,7 @@ const NewAiAnimate = () => {
             gsap.set('.doll', { scale: 0, opacity: 0 });
             gsap.set('.bottom-tab', { y: 50, opacity: 0 });
             gsap.set('.gradient-overlay', { x: '-100%', opacity: 0 });
- 
+
             // Create the main animation timeline
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -71,25 +71,25 @@ const NewAiAnimate = () => {
                     markers: false, // Set to true for debugging
                 }
             });
- 
+
             // Doll animation first
             // tl.to('.doll', { scale: 1, opacity: 1, duration: 1 }, 0);
-             tl.fromTo('.doll', { y: 300, scale: 0.8, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 1 }, 0);
- 
+            tl.fromTo('.doll', { y: 300, scale: 0.8, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 1 }, 0);
+
             // Bottom tabs appear
             tl.to('.bottom-tab', { y: 0, opacity: 1, stagger: 0.2, duration: 1 }, 0.5);
- 
+
             // Pills animate in sequence
             tl.to('.left-pill', { x: 0, scale: 1, opacity: 1, stagger: 0.3, duration: 1 }, 1);
             tl.to('.right-pill', { x: 0, scale: 1, opacity: 1, stagger: 0.3, duration: 1 }, 1);
- 
+
             // Gradient overlay
             tl.to('.gradient-overlay', { x: '100%', opacity: 1, duration: 1.5 }, 2);
         }, sectionRef);
- 
+
         return () => ctx.revert();
     }, []);
- 
+
     const Pill: React.FC<PillProps> = ({ label, gif, isRight = false, className = '' }) => (
         <div
             className={`pill ${isRight ? 'right-pill' : 'left-pill'} absolute flex items-center space-x-3 bg-[#FFFFFF1A] rounded-full px-5 py-2 backdrop-blur-sm ${className}`}
@@ -101,19 +101,37 @@ const NewAiAnimate = () => {
             {isRight && <span className="text-sm font-medium pl-2">{label}</span>}
         </div>
     );
- 
+
     return (
         <section
             ref={sectionRef}
             className="relative mx-auto text-white pt-32 px-4 select-none bg-cover overflow-hidden max-h-screen sm:block hidden"
-           
+
             id='ai'
         >
             <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
-            <h2 className="text-center text-white mb-28">Tokyo Intelligence</h2>
- 
+            <h2 className="text-center text-white mb-28">
+                <span className="relative inline-block  text-white">
+                    {/* White text (front layer) */}
+                    <span className="relative z-10">
+                        Tokyo Intelligence
+                    </span>
+
+                    {/* Gradient shadow behind */}
+                    <span
+                        aria-hidden="true"
+                        className="absolute inset-0 -z-10 blur-[10px] opacity-100
+               bg-[linear-gradient(108deg,#0894FF,#C959DD_34%,#FF2E54_68%,#FF9004)]
+               bg-clip-text text-transparent"
+                    >
+                        Tokyo Intelligence
+                    </span>
+                </span>
+
+            </h2>
+
             <div className="relative flex justify-center items-center px-4 h-full max-w-[1300px] mx-auto">
- 
+
                 {/* Left Pills Container (Desktop/Wide Screens) */}
                 <div ref={leftPillsRef} className="absolute inset-0 hidden md:block z-20">
                     {leftPills.map((pill, idx) => (
@@ -125,7 +143,7 @@ const NewAiAnimate = () => {
                         />
                     ))}
                 </div>
- 
+
                 {/* Right Pills Container (Desktop/Wide Screens) */}
                 <div ref={rightPillsRef} className="absolute inset-0 hidden md:block z-20">
                     {rightPills.map((pill, idx) => (
@@ -138,14 +156,14 @@ const NewAiAnimate = () => {
                         />
                     ))}
                 </div>
- 
+
                 {/* Doll Video */}
                 <div className="relative w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[495px] mx-auto h-[625px]">
                     {/* <img src="/videos/doll.gif" alt="doll" className='doll w-full' /> */}
-                    <video src="/videos/Aiagent.mp4" autoPlay loop muted  className='doll'></video>
+                    <video src="/videos/Aiagent.mp4" autoPlay loop muted className='doll'></video>
                 </div>
             </div>
- 
+
             {/* Bottom Tabs */}
             <div
                 ref={bottomTabsRef}
@@ -174,7 +192,6 @@ const NewAiAnimate = () => {
         </section>
     );
 };
- 
+
 export default NewAiAnimate;
- 
- 
+

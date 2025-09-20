@@ -12,6 +12,7 @@ import NewAiAnimate from "./components/NewAiAnimate";
 import MobilePillTabs from "./components/MobilePillTabs";
 import Section from "./components/ui/Section";
 import HeroNew from "./components/HerNew";
+import Language from "./components/language";
 
 const pills = [
   { label: 'Models', gif: '/assets/gifs/models.gif' },
@@ -49,7 +50,9 @@ export default function Home() {
         <NewAiAnimate />
 
         <MobilePillTabs pills={pills} bottomTabs={bottomTabs} />
-
+        <Section>
+          <HeroNew />
+        </Section>
         <Section>
           <HowItWorks />
         </Section>
@@ -68,13 +71,14 @@ export default function Home() {
         <Section>
           <AICharacterSection />
         </Section>
+
         <Section>
-          <HeroNew />
+          <Language />
         </Section>
         <Section>
           <FaqSection />
         </Section>
-        
+
       </main>
     </div>
   );

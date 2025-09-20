@@ -121,7 +121,7 @@ const Step1 = () => {
       {/* Custom pointer */}
       <div
         ref={cursorRef}
-        className="absolute w-8 h-8 pointer-events-none z-50"
+        className="absolute w-8 h-8 pointer-events-none z-30"
         style={{
           backgroundImage: `url("/cursor.png")`,
           backgroundSize: "contain",

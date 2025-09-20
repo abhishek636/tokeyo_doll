@@ -57,8 +57,27 @@ export default function MobilePillTabs({ pills, bottomTabs }: MobilePillTabsProp
       className="relative w-full h-fit flex flex-col items-center justify-center text-white overflow-hidden px-4 py-10 sm:hidden block"
       id="ai"
     >
-        <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
-        <h2 className="text-center text-white mb-32">Tokyo Intelligence</h2>
+      <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
+      {/* <h2 className="text-center text-white mb-32">Tokyo Intelligence</h2> */}
+      <h2 className="text-center text-white mb-32">
+        <span className="relative inline-block  text-white">
+          {/* White text (front layer) */}
+          <span className="relative z-10">
+            Tokyo Intelligence
+          </span>
+
+          {/* Gradient shadow behind */}
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 blur-[10px] opacity-100
+               bg-[linear-gradient(108deg,#0894FF,#C959DD_34%,#FF2E54_68%,#FF9004)]
+               bg-clip-text text-transparent"
+          >
+            Tokyo Intelligence
+          </span>
+        </span>
+
+      </h2>
       {/* Pills Section */}
       <div className="relative flex justify-center items-center px-4 ">
         <AnimatePresence mode="wait">
@@ -81,8 +100,8 @@ export default function MobilePillTabs({ pills, bottomTabs }: MobilePillTabsProp
 
         {/* Doll Image */}
         <div className="relative w-full h-full w-full sm:max-w-[350px] md:max-w-[400px] lg:max-w-[495px] mx-auto ">
-            {/* <img src="/videos/doll.gif" alt="doll" className='doll w-full' /> */}
-            <video src="/videos/Aiagent.mp4" autoPlay loop muted playsInline controls={false} className='doll'></video>
+          {/* <img src="/videos/doll.gif" alt="doll" className='doll w-full' /> */}
+          <video src="/videos/Aiagent.mp4" autoPlay loop muted playsInline controls={false} className='doll'></video>
         </div>
       </div>
 
