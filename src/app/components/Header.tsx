@@ -68,7 +68,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8 text-[18px] tracking-tighter">
+        <nav className="hidden xl:flex space-x-8 text-[18px] tracking-tighter">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -87,7 +87,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative w-8 h-8 flex items-center justify-center md:hidden z-[80]"
+          className="relative w-8 h-8 flex items-center justify-center xl:hidden z-[80]"
         >
           {isOpen ? (
             // Cross (X)
