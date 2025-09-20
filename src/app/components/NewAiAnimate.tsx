@@ -105,7 +105,7 @@ const NewAiAnimate = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative mx-auto text-white pt-32 px-4 select-none bg-cover overflow-hidden max-h-screen sm:block hidden"
+            className="relative mx-auto text-white pt-32 px-4 select-none bg-cover overflow-hidden max-h-screen xl:block hidden"
 
             
         >

@@ -21,7 +21,7 @@ const HeroNew: React.FC = () => {
             {/* <p className="sm:mt-4 mt-2 text-[#A0A0A0] z-20 relative sm:px-0 px-2">
                 ( This feature is currently under development )             </p> */}
             <p className="border border-[#2388FF] text-[#2388FF] z-20 relative px-6 py-1 mt-8.5 text-[14px] rounded-full ">COMING SOON</p>
-            <Image src="/assets/images/ainew.png" alt="Animated GIF" className="z-10  sm:object-contain object-cover lg:-mt-40 -mt-5 min-h-[300px] min-w-[532px]" width={1300} height={900} />
+            <Image src="/assets/images/ainew.png" alt="Animated GIF" className="z-10  lg:object-contain object-cover lg:-mt-40 -mt-5 min-h-[300px] min-w-[532px]" width={1300} height={900} />
         </section>
     );
 };
