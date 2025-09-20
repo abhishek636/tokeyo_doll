@@ -107,7 +107,7 @@ const NewAiAnimate = () => {
             ref={sectionRef}
             className="relative mx-auto text-white pt-32 px-4 select-none bg-cover overflow-hidden max-h-screen sm:block hidden"
 
-            id='ai'
+            
         >
             <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
             <h2 className="text-center text-white mb-28">

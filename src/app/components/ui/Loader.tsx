@@ -22,7 +22,7 @@ const Loader: React.FC<LoaderProps> = ({ size = 80 }) => {
       <img
         src="/assets/gifs/loader.gif"
         alt="Loading..."
-        className="object-contain w-[400px]"
+        className="object-contain w-[320px]"
       />
     </div>
   );

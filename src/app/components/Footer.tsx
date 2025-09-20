@@ -23,7 +23,7 @@ export default function Footer() {
                             <h4 className="text-lg font-semibold text-white mb-4">Features</h4>
                             <ul className="sm:space-y-4 pa space-y-3">
                                 <li><Link href="#home" className="hover:text-white text-[#BABABA] transition-colors duration-200">Home</Link></li>
-                                <li><Link href="#features" className="hover:text-white text-[#BABABA] transition-colors duration-200">About</Link></li>
+                                <li><Link href="#about" className="hover:text-white text-[#BABABA] transition-colors duration-200">About</Link></li>
                                 <li><Link href="#ai" className="hover:text-white text-[#BABABA] transition-colors duration-200">AI Characters</Link></li>
                             </ul>
                         </div>
@@ -61,7 +61,7 @@ export default function Footer() {
             </div>
             <div className='max-w-[1360px]  mx-auto px-4 sm:px-6 lg:px-8'>
                 <p className='text-[24px] font-medium text-white sm:mt-10 mt-5 sm:mb-4 mb-2'>Disclaimer</p>
-                <p className='sm:text-[20px] text-base font-normal text-[#a0a0a0] leading-5'>Tokiyo is an independent project and is not affiliated with, endorsed by, or officially connected to the city of Tokyo or any of its governing bodies.</p>
+                <p className='sm:text-[20px] text-base font-normal text-[#a0a0a0] leading-5'>Tokyo is an independent project and is not affiliated with, endorsed by, or officially connected to the city of Tokyo or any of its governing bodies.</p>
             </div>
         </footer>
     );

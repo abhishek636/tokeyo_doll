@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function AtTokyo() {
   return (
-    <section>
-      <GradientLines className="min-h-screen h-screen flex items-center justify-center px-6">
+    <section id="about">
+      <GradientLines className="min-h-screen h-screen flex items-center justify-center px-6" >
         <motion.p
           className="max-w-2xl text-lg leading-relaxed scroll-reveal-text text-center"
           initial={{ opacity: 0, y: 40 }}

@@ -55,7 +55,7 @@ export default function MobilePillTabs({ pills, bottomTabs }: MobilePillTabsProp
     <div
       ref={sectionRef}
       className="relative w-full h-fit flex flex-col items-center justify-center text-white overflow-hidden px-4 py-10 sm:hidden block"
-      id="ai"
+      
     >
       <Image src="/bg-inte.png" alt="Tokyo Intelligence GIF" fill className='w-full object-cover absolute bottom-0 left-0 z-20' />
       {/* <h2 className="text-center text-white mb-32">Tokyo Intelligence</h2> */}
