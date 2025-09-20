@@ -1,29 +1,53 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Loader from './Loader';
+
+// Critical videos that should load first (above the fold)
+const CRITICAL_VIDEOS = [
+  '/videos/doll.mp4',
+  '/videos/doll2.mp4',
+  '/videos/doll3.mp4'
+];
+
+// Non-critical videos (lazy loaded)
+const LAZY_VIDEOS = [
+  '/videos/step3.mp4',
+  '/videos/AICharactor.mp4',
+  '/videos/Aiagent.mp4'
+];
 
 const LoaderWrapper = () => {
   const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const videoSources = [
-      '/videos/doll.mp4',
-      '/videos/doll2.mp4',
-      '/videos/doll3.mp4',
-      '/videos/step3.mp4',
-      '/videos/AICharactor.mp4',
-      '/videos/Aiagent.mp4'
-    ];
+    let loadedCount = 0;
+    const totalItems = CRITICAL_VIDEOS.length + 2; // videos + fonts + critical resources
 
-    const preloadVideos = async () => {
-      const promises = videoSources.map(src => {
-        return new Promise<void>((resolve, reject) => {
+    const updateProgress = () => {
+      loadedCount++;
+      setProgress((loadedCount / totalItems) * 100);
+    };
+
+    const preloadCriticalVideos = async () => {
+      const promises = CRITICAL_VIDEOS.map((src, index) => {
+        return new Promise<void>((resolve) => {
           const video = document.createElement('video');
-          video.preload = 'metadata'; // Only load metadata first
+          video.preload = 'metadata';
           video.src = src;
-          video.onloadedmetadata = () => resolve();
-          video.onerror = () => resolve(); // Continue even if one fails
+
+          video.onloadedmetadata = () => {
+            updateProgress();
+            resolve();
+          };
+
+          video.onerror = () => {
+            console.warn(`Failed to preload ${src}`);
+            updateProgress();
+            resolve();
+          };
+
           video.load();
         });
       });
@@ -31,27 +55,46 @@ const LoaderWrapper = () => {
       try {
         await Promise.all(promises);
       } catch (error) {
-        console.warn('Some videos failed to preload:', error);
+        console.warn('Some critical videos failed to preload:', error);
+      }
+    };
+
+    const preloadCriticalResources = async () => {
+      // Preload critical fonts
+      const fontPromises = [
+        document.fonts.load('16px Inter'),
+        document.fonts.load('bold 16px Inter')
+      ];
+
+      try {
+        await Promise.all(fontPromises);
+        updateProgress();
+      } catch (error) {
+        console.warn('Font loading failed:', error);
+        updateProgress();
       }
     };
 
     const handleLoad = async () => {
-      // Wait for initial load
+      // Wait for DOM to be ready
       await new Promise(resolve => {
         if (document.readyState === 'complete') {
           resolve(void 0);
         } else {
-          window.addEventListener('load', resolve);
+          window.addEventListener('load', resolve, { once: true });
         }
       });
 
-      // Preload videos
-      await preloadVideos();
+      // Start preloading critical resources
+      await Promise.all([
+        preloadCriticalVideos(),
+        preloadCriticalResources()
+      ]);
 
-      // Minimum display time for smooth UX
+      // Minimum display time for smooth UX (reduced from 2s to 1s)
       setTimeout(() => {
         setLoading(false);
-      }, 2000); // 2 seconds minimum
+      }, 1000);
     };
 
     handleLoad();
@@ -62,12 +105,10 @@ const LoaderWrapper = () => {
   }, []);
 
   if (loading) {
-    return <Loader />;
+    return <Loader progress={progress} />;
   }
 
   return null;
 };
 
 export default LoaderWrapper;
- 
- 
